@@ -22,13 +22,13 @@ import { breadcrumbJsonLd, catalogPageJsonLd, servicesItemListJsonLd } from '../
   <Header />
   <main>
     <!-- BEGIN: Catalog Hero -->
-    <section class="relative pt-36 pb-20 overflow-hidden bg-brand-midnight" data-purpose="catalog-hero">
+    <section class="relative pt-28 sm:pt-36 pb-16 sm:pb-20 overflow-hidden bg-brand-midnight" data-purpose="catalog-hero">
       <div class="absolute right-[10%] top-28 w-12 h-12 md:w-16 md:h-16 z-10 pointer-events-none select-none opacity-90 hidden md:block">
         <img alt="" class="w-full h-full object-contain filter drop-shadow-[0_0_25px_rgba(204,255,0,0.35)]" src="/star-lima.svg" />
       </div>
-      <div class="relative z-10 max-w-7xl mx-auto px-6">
-        <nav class="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-brand-muted mb-10" aria-label="Breadcrumb">
-          <a class="hover:text-white transition-colors" href="/">Inicio</a>
+      <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-6">
+        <nav class="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-brand-muted mb-8 sm:mb-10" aria-label="Breadcrumb">
+          <a class="inline-flex items-center min-h-[44px] -my-3 hover:text-white transition-colors" href="/">Inicio</a>
           <span class="text-white/20">/</span>
           <span class="text-brand-lima">Servicios</span>
         </nav>
@@ -37,13 +37,13 @@ import { breadcrumbJsonLd, catalogPageJsonLd, servicesItemListJsonLd } from '../
           <span class="text-xs font-mono tracking-wider uppercase text-brand-lima font-medium">{catalog.eyebrow}</span>
         </div>
         <div class="max-w-4xl">
-          <h1 class="text-5xl sm:text-6xl lg:text-7xl tracking-[-0.035em] font-light leading-[1.03] text-white mb-8">
-            Servicios de <br />
+          <h1 class="text-[2.75rem] sm:text-6xl lg:text-7xl tracking-[-0.035em] font-light leading-[1.03] text-white mb-6 sm:mb-8">
+            Servicios de <br class="hidden sm:inline" />
             <span class="italic font-serif font-light text-brand-lima">Inteligencia Artificial.</span>
           </h1>
           <p class="text-neutral-300 text-base sm:text-lg font-light leading-relaxed max-w-2xl text-balance">{catalog.p}</p>
         </div>
-        <div class="mt-10 flex flex-wrap items-center gap-6 text-xs font-mono text-brand-muted">
+        <div class="mt-8 sm:mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs font-mono text-brand-muted">
           <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-brand-lima"></span><span>12 líneas de servicio</span></div>
           <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-brand-coral"></span><span>4 familias</span></div>
           <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-400"></span><span>EU-hosted · 100% RGPD</span></div>
@@ -53,25 +53,25 @@ import { breadcrumbJsonLd, catalogPageJsonLd, servicesItemListJsonLd } from '../
     <!-- END: Catalog Hero -->
 
     <!-- BEGIN: Families -->
-    <section class="py-24 bg-white text-neutral-800 relative" data-purpose="catalog-families">
-      <div class="max-w-7xl mx-auto px-6 space-y-20">
+    <section class="py-20 sm:py-24 bg-white text-neutral-800 relative" data-purpose="catalog-families">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 space-y-16 sm:space-y-20">
         {
           familyOrder.map((key) => {
             const fam = families[key];
             const list = servicesByFamily(key);
             return (
               <div>
-                <div class="flex items-center gap-5 pb-8 mb-8 border-b border-black/[0.08]">
-                  <span class={`w-12 h-12 rounded-2xl bg-brand-midnight ${fam.text} font-display text-2xl font-medium flex items-center justify-center shadow-lg`}>{fam.key}</span>
+                <div class="flex items-center gap-4 sm:gap-5 pb-6 sm:pb-8 mb-6 sm:mb-8 border-b border-black/[0.08]">
+                  <span class={`w-11 h-11 sm:w-12 sm:h-12 shrink-0 rounded-2xl bg-brand-midnight ${fam.text} font-display text-2xl font-medium flex items-center justify-center shadow-lg`}>{fam.key}</span>
                   <div>
                     <h2 class="text-2xl sm:text-3xl font-normal tracking-tight text-neutral-800 font-display">{fam.name}</h2>
                     <div class="text-xs font-mono tracking-wider uppercase text-neutral-500 mt-1">{list.length} servicios disponibles</div>
                   </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                   {list.map((s) => (
                     <a
-                      class={`group relative rounded-3xl p-7 bg-[#FAFAFA] border border-black/[0.06] hover:bg-brand-midnight hover:text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl flex flex-col justify-between min-h-[280px]`}
+                      class={`group relative rounded-3xl p-6 sm:p-7 bg-[#FAFAFA] border border-black/[0.06] hover:bg-brand-midnight hover:text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl flex flex-col justify-between md:min-h-[280px]`}
                       href={serviceUrl(s.slug)}
                     >
                       <div>
@@ -98,8 +98,8 @@ import { breadcrumbJsonLd, catalogPageJsonLd, servicesItemListJsonLd } from '../
     <!-- END: Families -->
 
     <!-- BEGIN: Combinations -->
-    <section class="py-24 bg-[#0C0D13] border-t border-white/5 relative" data-purpose="catalog-combos">
-      <div class="max-w-7xl mx-auto px-6">
+    <section class="py-20 sm:py-24 bg-[#0C0D13] border-t border-white/5 relative" data-purpose="catalog-combos">
+      <div class="max-w-7xl mx-auto px-5 sm:px-6">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div class="lg:col-span-4">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-lima/10 border border-brand-lima/20 text-brand-lima text-[11px] font-mono tracking-wider uppercase mb-6">
@@ -109,11 +109,11 @@ import { breadcrumbJsonLd, catalogPageJsonLd, servicesItemListJsonLd } from '../
             <h2 class="text-3xl sm:text-4xl font-light tracking-tight text-white leading-[1.1] mb-5">{catalog.combos.h2}</h2>
             <p class="text-neutral-400 text-sm leading-relaxed">{catalog.combos.p}</p>
           </div>
-          <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
             {
               catalog.combos.items.map((c, i) => (
-                <div class="rounded-2xl p-7 bg-white/[0.03] border border-white/10 hover:border-brand-lima/50 transition-colors duration-300 flex flex-col min-h-[240px]">
-                  <div class="text-5xl font-light font-display tracking-tight text-brand-lima mb-8">{String(i + 1).padStart(2, '0')}</div>
+                <div class="rounded-2xl p-6 sm:p-7 bg-white/[0.03] border border-white/10 hover:border-brand-lima/50 transition-colors duration-300 flex flex-col md:min-h-[240px]">
+                  <div class="text-5xl font-light font-display tracking-tight text-brand-lima mb-6 md:mb-8">{String(i + 1).padStart(2, '0')}</div>
                   <div class="mt-auto pt-6 border-t border-white/10">
                     <h3 class="text-base font-bold text-white tracking-tight leading-snug mb-2">{c.title}</h3>
                     <p class="text-xs text-neutral-300 leading-relaxed [&_b]:text-white [&_b]:font-semibold" set:html={c.html} />
@@ -129,12 +129,12 @@ import { breadcrumbJsonLd, catalogPageJsonLd, servicesItemListJsonLd } from '../
 
     <!-- BEGIN: CTA -->
     <section
-      class="py-24 relative overflow-hidden"
+      class="py-20 sm:py-24 relative overflow-hidden"
       data-purpose="catalog-cta"
       id="contacto"
       style="background: radial-gradient(circle at 50% 50%, rgba(55, 25, 38, 0.6) 0%, rgba(14, 15, 23, 0.95) 80%);"
     >
-      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div class="relative z-10 max-w-5xl mx-auto px-5 sm:px-6 text-center">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-lima text-xs font-mono mb-6">
           <span>{catalog.cta.eyebrow}</span>
         </div>
@@ -144,14 +144,14 @@ import { breadcrumbJsonLd, catalogPageJsonLd, servicesItemListJsonLd } from '../
         <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-normal">{catalog.cta.p}</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
           <a
-            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-brand-lima hover:bg-brand-lima-hover text-brand-midnight font-bold text-sm transition-all duration-200 shadow-xl shadow-brand-lima/20"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 min-h-[52px] px-8 py-4 rounded-full bg-brand-lima hover:bg-brand-lima-hover text-brand-midnight font-bold text-sm transition-all duration-200 shadow-xl shadow-brand-lima/20"
             href="mailto:hola@quantumfactory.io"
           >
             <span>Agendar diagnóstico gratuito</span>
             <span>→</span>
           </a>
           <a
-            class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 text-white text-sm font-medium border border-white/10 transition-colors"
+            class="w-full sm:w-auto inline-flex items-center justify-center min-h-[52px] px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 text-white text-sm font-medium border border-white/10 transition-colors"
             href="/#metodo"
           >
             <span>Ver nuestro método</span>

@@ -1,82 +1,100 @@
 ---
 const starLima = '/star-lima.svg';
 const starSecondary = '/star-lima.svg';
+const sphereStyle =
+  'background: radial-gradient(circle at 70% 30%, rgba(255, 107, 122, 0.95) 0%, rgba(158, 59, 66, 0.9) 35%, rgba(45, 20, 35, 0.92) 70%, rgba(8, 9, 13, 0.98) 100%); box-shadow: 0 0 120px rgba(255, 107, 122, 0.18);';
+const heroCopy =
+  'Diseñamos y ponemos en producción sistemas de inteligencia artificial que automatizan tareas, convierten tus datos en decisiones y hacen crecer tu negocio con ROI demostrado.';
 ---
 
 <!-- BEGIN: Hero Section -->
 <section
-  class="relative min-h-[92vh] flex items-center pt-28 pb-20 overflow-hidden bg-brand-midnight"
+  class="relative hero-min-h flex items-center pt-24 sm:pt-28 pb-16 sm:pb-20 overflow-hidden bg-brand-midnight"
   data-purpose="hero-section"
 >
   <!-- Suspended Lima Star Accent -->
   <div
-    class="absolute top-24 left-1/2 -translate-x-1/2 w-14 h-14 md:w-16 md:h-16 z-20 pointer-events-none select-none opacity-95"
+    class="absolute top-20 sm:top-24 left-1/2 -translate-x-1/2 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 z-20 pointer-events-none select-none opacity-95"
   >
     <img
-      alt="Estrella Lima"
+      alt=""
       class="w-full h-full object-contain filter drop-shadow-[0_0_25px_rgba(204,255,0,0.35)]"
       src={starLima}
     />
   </div>
-  <!-- Big Chromatic Sphere at Right with Inset Text (capped at 64vh = 70% of the 92vh hero so it always keeps top/bottom breathing room) -->
+
+  <!-- < xl: the sphere is an ambient orb behind the copy; its bright core sits off-canvas so the headline stays legible -->
   <div
-    class="absolute -right-20 sm:-right-10 top-1/2 -translate-y-1/2 w-[min(520px,64vh)] h-[min(520px,64vh)] sm:w-[min(600px,64vh)] sm:h-[min(600px,64vh)] lg:w-[min(660px,64vh)] lg:h-[min(660px,64vh)] rounded-full z-10 pointer-events-none select-none flex items-center justify-center p-12 text-center"
-    style="background: radial-gradient(circle at 70% 30%, rgba(255, 107, 122, 0.95) 0%, rgba(158, 59, 66, 0.9) 35%, rgba(45, 20, 35, 0.92) 70%, rgba(8, 9, 13, 0.98) 100%); box-shadow: 0 0 120px rgba(255, 107, 122, 0.18);"
+    class="xl:hidden absolute -right-[22%] sm:-right-[14%] -top-6 sm:-top-[10%] w-[88vw] sm:w-[70vw] max-w-[640px] aspect-square rounded-full z-0 pointer-events-none select-none opacity-70"
+    style={sphereStyle}
+    aria-hidden="true"
+  >
+  </div>
+
+  <!-- ≥ xl: Big Chromatic Sphere at Right with Inset Text (capped at 64vh = 70% of the 92vh hero so it always keeps top/bottom breathing room) -->
+  <div
+    class="hidden xl:flex absolute -right-10 top-1/2 -translate-y-1/2 w-[min(560px,64vh)] h-[min(560px,64vh)] 2xl:w-[min(660px,64vh)] 2xl:h-[min(660px,64vh)] rounded-full z-10 pointer-events-none select-none items-center justify-center p-12 text-center"
+    style={sphereStyle}
   >
     <div class="max-w-md px-6 text-center text-white/90">
-      <p class="text-sm sm:text-base lg:text-[min(18px,2vh)] font-light leading-relaxed text-balance text-neutral-200">
-        Diseñamos y ponemos en producción sistemas de inteligencia artificial que automatizan tareas, convierten tus
-        datos en decisiones y hacen crecer tu negocio con ROI demostrado.
+      <p class="text-base 2xl:text-[min(18px,2vh)] font-light leading-relaxed text-balance text-neutral-200">
+        {heroCopy}
       </p>
     </div>
   </div>
+
   <!-- Decorative Secondary Ambient Star Accent -->
-  <div class="absolute right-[22%] bottom-16 w-12 h-12 z-20 pointer-events-none select-none opacity-40">
+  <div class="absolute right-[8%] sm:right-[22%] bottom-10 sm:bottom-16 w-9 h-9 sm:w-12 sm:h-12 z-20 pointer-events-none select-none opacity-40">
     <img
-      alt="Estrella Secundaria"
+      alt=""
       class="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(255,107,122,0.4)]"
       src={starSecondary}
     />
   </div>
+
   <!-- Hero Content Container -->
-  <div class="relative z-20 max-w-7xl mx-auto px-6 w-full">
+  <div class="relative z-20 max-w-7xl mx-auto px-5 sm:px-6 w-full">
     <!-- Top Pill Tag -->
-    <div class="mb-10 inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full frosted-pill">
+    <div class="mb-8 sm:mb-10 inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full frosted-pill">
       <span class="text-brand-lima text-xs">✦</span>
-      <span class="text-xs font-mono tracking-wider uppercase text-brand-lima font-medium"
+      <span class="text-[10px] sm:text-xs font-mono tracking-wide sm:tracking-wider uppercase text-brand-lima font-medium"
         >INTELIGENCIA ARTIFICIAL APLICADA · QF 2026</span
       >
     </div>
     <!-- Monumental Editorial Title -->
     <div class="max-w-3xl">
       <h1
-        class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.4rem] tracking-[-0.035em] font-light leading-[1.03] text-white mb-12"
+        class="text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[4.5rem] xl:text-[5.4rem] tracking-[-0.035em] font-light leading-[1.03] text-white mb-6 sm:mb-8 xl:mb-12"
       >
-        IA que trabaja para <br />
+        IA que trabaja para <br class="hidden sm:inline" />
         <span class="italic font-serif font-light text-brand-lima">tu empresa.</span>
       </h1>
+      <!-- < xl: the sphere copy lives in the flow instead of inside the orb -->
+      <p class="xl:hidden max-w-xl text-base sm:text-lg font-light leading-relaxed text-neutral-300 text-balance mb-8 sm:mb-10">
+        {heroCopy}
+      </p>
       <!-- CTA Buttons and Microcopy -->
-      <div class="flex flex-wrap items-center gap-4">
+      <div class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4">
         <a
-          class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-brand-lima text-brand-midnight font-bold text-sm tracking-tight hover:bg-brand-lima-hover transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg shadow-brand-lima/20"
+          class="inline-flex items-center justify-center gap-3 min-h-[52px] px-8 py-4 rounded-full bg-brand-lima text-brand-midnight font-bold text-sm tracking-tight hover:bg-brand-lima-hover transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg shadow-brand-lima/20"
           href="#contacto"
         >
           <span>Hablemos de tu reto</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
             ><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             ></path></svg
           >
         </a>
         <a
-          class="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-white text-sm font-medium border border-white/10 transition-colors"
+          class="inline-flex items-center justify-center gap-2 min-h-[52px] px-6 py-4 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-white text-sm font-medium border border-white/10 transition-colors"
           href="/servicios"
         >
           <span>Ver los 12 servicios</span>
         </a>
       </div>
       <!-- Social Proof Strip -->
-      <div class="mt-8 flex items-center gap-3 text-xs font-mono text-brand-muted">
-        <div class="flex -space-x-1 items-center">
+      <div class="mt-8 flex items-center gap-3 text-[11px] sm:text-xs font-mono text-brand-muted">
+        <div class="flex -space-x-1 items-center shrink-0">
           <span class="w-2 h-2 rounded-full bg-brand-lima"></span>
           <span class="w-2 h-2 rounded-full bg-brand-coral"></span>
         </div>

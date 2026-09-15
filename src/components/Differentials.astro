@@ -65,24 +65,24 @@ const quadrants = [
 
 <!-- BEGIN: Differentials & Compliance -->
 <section
-  class="py-28 bg-[#090A0F] text-white relative overflow-hidden"
+  class="py-20 sm:py-28 bg-[#090A0F] text-white relative overflow-hidden"
   data-purpose="differentials"
   id="diferenciales"
   style="background: radial-gradient(circle at 75% 50%, rgba(185, 65, 45, 0.18) 0%, rgba(120, 35, 30, 0.08) 45%, rgba(9, 10, 15, 0.98) 75%), rgb(9, 10, 15);"
 >
-  <div class="max-w-7xl mx-auto px-6 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
       <!-- Left Column -->
       <div class="lg:col-span-4 flex flex-col justify-between pt-2">
         <div>
-          <div class="inline-flex items-center gap-2 mb-8">
+          <div class="inline-flex items-center gap-2 mb-6 sm:mb-8">
             <span class="w-1.5 h-1.5 rounded-full bg-brand-lima animate-pulse"></span>
             <span class="text-[11px] font-mono tracking-widest uppercase text-brand-muted font-semibold"
               >04 DIFERENCIALES CLAVE</span
             >
           </div>
           <h2
-            class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.08] mb-6 font-display"
+            class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-white leading-[1.08] mb-6 font-display text-balance"
           >
             Por qué elegir <br />
             <span class="text-brand-coral">Quantum Factory</span>
@@ -101,14 +101,14 @@ const quadrants = [
       </div>
       <!-- Right Column: 4 Quadrants -->
       <div class="lg:col-span-8 relative">
-        <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 divide-white/10 relative">
+        <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 divide-white/10 relative -mx-5 sm:mx-0">
           <!-- Separators -->
           <div class="hidden md:block absolute left-0 right-0 top-1/2 h-[1px] bg-white/15 z-10 pointer-events-none"></div>
           <div class="hidden md:block absolute top-0 bottom-0 left-1/2 w-[1px] bg-white/15 z-10 pointer-events-none"></div>
           {
             quadrants.map((q) => (
-              <div class={`p-8 ${q.pad} group hover:bg-white/[0.02] transition-colors duration-300 relative`}>
-                <div class="flex items-center justify-between mb-6">
+              <div class={`px-5 py-7 sm:p-8 ${q.pad} group hover:bg-white/[0.02] transition-colors duration-300 relative`}>
+                <div class="flex items-center justify-between mb-5 sm:mb-6">
                   <span class={`text-xs font-mono tracking-widest ${q.kickerColor} font-semibold`}>{q.kicker}</span>
                   <span class={`text-xs font-mono text-white/40 ${q.starHover} transition-colors`}>✦</span>
                 </div>

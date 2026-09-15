@@ -23,3 +23,42 @@
 .editorial-border-light {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
+
+/* Responsive plumbing */
+html {
+  /* Fixed header (4rem mobile / 5rem desktop) must not cover in-page anchor targets */
+  scroll-padding-top: calc(4.5rem + env(safe-area-inset-top, 0px));
+}
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 5.5rem;
+  }
+}
+html.menu-open,
+html.menu-open body {
+  overflow: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+/* Touch surfaces: no sticky hover lift on cards, keep colour feedback */
+@media (hover: none) {
+  .hover\:-translate-y-1\.5:hover,
+  .hover\:-translate-y-1:hover,
+  .hover\:-translate-y-0\.5:hover {
+    transform: none;
+  }
+}
+
+/* Hero height: fill the first screen under the fixed header (svh ignores the mobile URL bar) */
+.hero-min-h {
+  min-height: calc(100vh - 4rem);
+  min-height: calc(100svh - 4rem);
+}
+@media (min-width: 1024px) {
+  .hero-min-h {
+    min-height: 92vh;
+  }
+}

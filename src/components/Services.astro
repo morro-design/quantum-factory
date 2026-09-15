@@ -118,9 +118,9 @@ const cards = [
 ---
 
 <!-- BEGIN: Services Catalog (Deep Gradient Rich Cards) -->
-<section class="py-28 bg-white text-neutral-800 relative overflow-hidden" data-purpose="services-catalog" id="servicios">
-  <div class="max-w-7xl mx-auto px-6 relative z-10">
-    <div class="max-w-3xl mb-16 text-left">
+<section class="py-20 sm:py-28 bg-white text-neutral-800 relative overflow-hidden" data-purpose="services-catalog" id="servicios">
+  <div class="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+    <div class="max-w-3xl mb-12 sm:mb-16 text-left">
       <div class="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-brand-crimson/10 border border-brand-crimson/20">
         <span class="w-1.5 h-1.5 rounded-full bg-brand-crimson"></span>
         <span class="text-xs font-mono tracking-widest uppercase text-brand-crimson font-semibold">Capacidades Esenciales</span>
@@ -135,16 +135,16 @@ const cards = [
         Así es como convertimos IA teórica en impacto tangible diario.
       </p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mb-12 sm:mb-14">
       {
         cards.map((c) => (
           <div
-            class={`group relative rounded-3xl p-8 border border-white/10 ${c.borderHover} transition-all duration-500 overflow-hidden flex flex-col justify-between min-h-[400px] shadow-2xl hover:-translate-y-1.5 text-white`}
+            class={`group relative rounded-3xl p-6 sm:p-7 lg:p-8 border border-white/10 ${c.borderHover} transition-all duration-500 overflow-hidden flex flex-col justify-between sm:min-h-[400px] shadow-2xl hover:-translate-y-1.5 text-white`}
             style={c.style}
           >
             <div class="relative z-10">
               <div
-                class={`w-12 h-12 rounded-2xl ${c.iconWrap} backdrop-blur-md flex items-center justify-center mb-8 shadow-lg`}
+                class={`w-12 h-12 rounded-2xl ${c.iconWrap} backdrop-blur-md flex items-center justify-center mb-6 sm:mb-8 shadow-lg`}
                 set:html={c.icon}
               />
               <div class={`text-xs font-mono uppercase tracking-widest ${c.kicker} mb-2 font-semibold flex items-center gap-1.5`}>
@@ -154,20 +154,20 @@ const cards = [
               <h3 class={`text-2xl font-bold text-white mb-3 tracking-tight ${c.titleHover} transition-colors`}>{c.title}</h3>
               <p class="text-neutral-300 text-sm leading-relaxed">{c.text}</p>
             </div>
-            <div class="relative z-10 pt-8 flex items-center justify-between border-t border-white/10">
-              <a class={`inline-flex items-center gap-2 text-sm font-semibold ${c.link} hover:text-white transition-colors`} href={c.href}>
+            <div class="relative z-10 mt-8 pt-4 sm:pt-6 flex items-center justify-between gap-3 border-t border-white/10">
+              <a class={`inline-flex items-center gap-2 min-h-[44px] -my-2 text-sm font-semibold ${c.link} hover:text-white transition-colors`} href={c.href}>
                 <span>{c.cta}</span>
                 <span>→</span>
               </a>
-              <span class={`text-[11px] font-mono ${c.badge} px-2 py-0.5 rounded-full border`}>{c.badgeText}</span>
+              <span class={`text-[11px] font-mono ${c.badge} px-2 py-0.5 rounded-full border whitespace-nowrap`}>{c.badgeText}</span>
             </div>
           </div>
         ))
       }
     </div>
     <!-- Bottom Strip -->
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pt-10 editorial-border-light">
-      <div class="flex flex-wrap items-center gap-6 text-xs font-mono text-neutral-600">
+    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pt-8 sm:pt-10 editorial-border-light">
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs font-mono text-neutral-600">
         <div class="flex items-center gap-2">
           <span class="text-brand-crimson font-bold">⚡</span><span class="font-medium text-neutral-800">Código 100% Propietario</span>
         </div>
@@ -180,12 +180,12 @@ const cards = [
           <span class="text-brand-coral font-bold">✦</span><span class="font-medium text-neutral-800">Retorno Medible</span>
         </div>
       </div>
-      <div>
+      <div class="w-full lg:w-auto">
         <a
-          class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-neutral-900 hover:bg-brand-crimson text-white text-xs font-mono font-semibold uppercase tracking-wider transition-all duration-300 group shadow-md"
+          class="inline-flex w-full lg:w-auto items-center justify-center gap-3 min-h-[48px] px-6 py-3 rounded-full bg-neutral-900 hover:bg-brand-crimson text-white text-xs font-mono font-semibold uppercase tracking-wider transition-all duration-300 group shadow-md"
           href="/servicios"
         >
-          <span>Ver el catálogo completo de los 12 servicios</span>
+          <span class="text-center"><span class="hidden sm:inline">Ver el catálogo completo de los 12 servicios</span><span class="sm:hidden">Catálogo completo · 12 servicios</span></span>
           <span class="transition-transform duration-300 group-hover:translate-x-1 font-sans text-sm">→</span>
         </a>
       </div>

@@ -18,13 +18,13 @@ const starSecondary = '/star-lima.svg';
       src={starLima}
     />
   </div>
-  <!-- Big Chromatic Sphere at Right with Inset Text -->
+  <!-- Big Chromatic Sphere at Right with Inset Text (capped at 64vh = 70% of the 92vh hero so it always keeps top/bottom breathing room) -->
   <div
-    class="absolute -right-20 sm:-right-10 top-1/2 -translate-y-1/2 w-[520px] h-[520px] sm:w-[600px] sm:h-[600px] lg:w-[660px] lg:h-[660px] rounded-full z-10 pointer-events-none select-none flex items-center justify-center p-12 text-center"
+    class="absolute -right-20 sm:-right-10 top-1/2 -translate-y-1/2 w-[min(520px,64vh)] h-[min(520px,64vh)] sm:w-[min(600px,64vh)] sm:h-[min(600px,64vh)] lg:w-[min(660px,64vh)] lg:h-[min(660px,64vh)] rounded-full z-10 pointer-events-none select-none flex items-center justify-center p-12 text-center"
     style="background: radial-gradient(circle at 70% 30%, rgba(255, 107, 122, 0.95) 0%, rgba(158, 59, 66, 0.9) 35%, rgba(45, 20, 35, 0.92) 70%, rgba(8, 9, 13, 0.98) 100%); box-shadow: 0 0 120px rgba(255, 107, 122, 0.18);"
   >
     <div class="max-w-md px-6 text-center text-white/90">
-      <p class="text-sm sm:text-base lg:text-lg font-light leading-relaxed text-balance text-neutral-200">
+      <p class="text-sm sm:text-base lg:text-[min(18px,2vh)] font-light leading-relaxed text-balance text-neutral-200">
         Diseñamos y ponemos en producción sistemas de inteligencia artificial que automatizan tareas, convierten tus
         datos en decisiones y hacen crecer tu negocio con ROI demostrado.
       </p>

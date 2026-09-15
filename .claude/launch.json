@@ -5,7 +5,6 @@
       "name": "astro-dev",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--", "--port", "4321"],
-      "cwd": "app",
       "port": 4321
     }
   ]

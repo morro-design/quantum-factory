@@ -1,0 +1,195 @@
+---
+const cards = [
+  {
+    // Card 1: Flujos Autónomos
+    style:
+      'background: radial-gradient(circle at 85% 15%, rgba(204, 255, 0, 0.25) 0%, transparent 55%), linear-gradient(150deg, rgb(17, 26, 12) 0%, rgb(23, 36, 18) 35%, rgb(13, 20, 10) 100%);',
+    borderHover: 'hover:border-brand-lima/60',
+    iconWrap: 'bg-brand-lima/15 border border-brand-lima/30 text-brand-lima',
+    icon: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect height="16" rx="2" width="16" x="4" y="4"></rect><rect height="6" width="6" x="9" y="9"></rect><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"></path></svg>',
+    kicker: 'text-brand-lima',
+    dot: 'bg-brand-lima animate-pulse',
+    label: '01 / FLUJOS INTELIGENTES',
+    titleHover: 'group-hover:text-brand-lima',
+    title: 'Flujos Autónomos',
+    text: 'Eliminamos tareas repetitivas y orquestamos procesos operacionales críticos de extremo a extremo sin margen de error.',
+    link: 'text-brand-lima',
+    cta: 'Explorar flujos',
+    href: '/servicios/automatizacion-procesos-ia',
+    badge: 'text-brand-lima/80 bg-brand-lima/10 border-brand-lima/20',
+    badgeText: '+85% eficiencia',
+  },
+  {
+    // Card 2: Agentes & Herramientas
+    style:
+      'background: radial-gradient(circle at 85% 15%, rgba(168, 85, 247, 0.3) 0%, transparent 60%), linear-gradient(150deg, rgb(27, 15, 46) 0%, rgb(41, 18, 69) 45%, rgb(19, 10, 33) 100%);',
+    borderHover: 'hover:border-purple-400/60',
+    iconWrap: 'bg-purple-500/15 border border-purple-400/30 text-purple-300',
+    icon: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>',
+    kicker: 'text-purple-300',
+    dot: 'bg-purple-400',
+    label: '02 / AGENTES DINÁMICOS',
+    titleHover: 'group-hover:text-purple-200',
+    title: 'Agentes & Herramientas',
+    text: 'Entidades autónomas conectadas a tus APIs, bases de datos y herramientas operativas para resolver tareas complejas 24/7.',
+    link: 'text-purple-300',
+    cta: 'Descubrir agentes',
+    href: '/servicios/agentes-ia-personalizados',
+    badge: 'text-purple-200 bg-purple-500/15 border-purple-400/30',
+    badgeText: 'Autónomo 24/7',
+  },
+  {
+    // Card 3: Datos & RAG Soberano
+    style:
+      'background: radial-gradient(circle at 85% 15%, rgba(6, 182, 212, 0.3) 0%, transparent 60%), linear-gradient(150deg, rgb(9, 26, 38) 0%, rgb(13, 40, 60) 45%, rgb(6, 18, 27) 100%);',
+    borderHover: 'hover:border-cyan-400/60',
+    iconWrap: 'bg-cyan-500/15 border border-cyan-400/30 text-cyan-300',
+    icon: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>',
+    kicker: 'text-cyan-300',
+    dot: 'bg-cyan-400',
+    label: '03 / DATOS PRIVADOS',
+    titleHover: 'group-hover:text-cyan-200',
+    title: 'Datos & RAG Soberano',
+    text: 'Búsqueda semántica de precisión sobre repositorios confidenciales con arquitectura zero-leakage y RGPD compliant.',
+    link: 'text-cyan-300',
+    cta: 'Ver arquitectura',
+    href: '/servicios/asistentes-internos-empresas',
+    badge: 'text-cyan-200 bg-cyan-500/15 border-cyan-400/30',
+    badgeText: 'Zero-Leakage',
+  },
+  {
+    // Card 4: Automatización Comercial
+    style:
+      'background: radial-gradient(circle at 85% 15%, rgba(255, 107, 122, 0.32) 0%, transparent 55%), linear-gradient(150deg, rgb(38, 13, 21) 0%, rgb(61, 18, 34) 45%, rgb(26, 8, 14) 100%);',
+    borderHover: 'hover:border-brand-coral/60',
+    iconWrap: 'bg-brand-coral/15 border border-brand-coral/30 text-brand-coral',
+    icon: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+    kicker: 'text-brand-coral',
+    dot: 'bg-brand-coral animate-pulse',
+    label: '04 / VENTAS & CRM',
+    titleHover: 'group-hover:text-brand-coral',
+    title: 'Automatización Comercial',
+    text: 'Captación, cualificación ultrarrápida y seguimiento automático conectados directamente a tu CRM y WhatsApp empresarial.',
+    link: 'text-brand-coral',
+    cta: 'Optimizar ventas',
+    href: '/servicios/automatizacion-ventas-crm-ia',
+    badge: 'text-brand-coral bg-brand-coral/15 border-brand-coral/30',
+    badgeText: '+3.4x Cierres',
+  },
+  {
+    // Card 5: Procesamiento Inteligente
+    style:
+      'background: radial-gradient(circle at 85% 15%, rgba(245, 158, 11, 0.3) 0%, transparent 60%), linear-gradient(150deg, rgb(36, 20, 7) 0%, rgb(56, 30, 8) 45%, rgb(23, 12, 4) 100%);',
+    borderHover: 'hover:border-amber-400/60',
+    iconWrap: 'bg-amber-500/15 border border-amber-400/30 text-amber-400',
+    icon: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+    kicker: 'text-amber-400',
+    dot: 'bg-amber-400',
+    label: '05 / DOCUMENTOS & OCR',
+    titleHover: 'group-hover:text-amber-300',
+    title: 'Procesamiento Inteligente',
+    text: 'Lectura, extracción estructurada y conciliación automática de facturas, contratos y expedientes complejos sin fricción manual.',
+    link: 'text-amber-400',
+    cta: 'Ver procesamiento',
+    href: '/servicios/procesamiento-documentos-ia',
+    badge: 'text-amber-300 bg-amber-500/15 border-amber-400/30',
+    badgeText: '99.4% Precisión',
+  },
+  {
+    // Card 6: Agentes de Voz & Chat 24/7
+    style:
+      'background: radial-gradient(circle at 85% 15%, rgba(16, 185, 129, 0.3) 0%, transparent 60%), linear-gradient(150deg, rgb(9, 31, 23) 0%, rgb(14, 48, 37) 45%, rgb(5, 20, 15) 100%);',
+    borderHover: 'hover:border-emerald-400/60',
+    iconWrap: 'bg-emerald-500/15 border border-emerald-400/30 text-emerald-400',
+    icon: '<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+    kicker: 'text-emerald-400',
+    dot: 'bg-emerald-400',
+    label: '06 / VOZ & SOPORTE',
+    titleHover: 'group-hover:text-emerald-300',
+    title: 'Agentes de Voz & Chat 24/7',
+    text: 'Asistentes multicanal de voz y chat capaces de resolver incidencias en tiempo real y agendar citas con dicción humana ultrafluida.',
+    link: 'text-emerald-400',
+    cta: 'Escuchar demos',
+    href: '/servicios/agentes-de-voz-ia',
+    badge: 'text-emerald-300 bg-emerald-500/15 border-emerald-400/30',
+    badgeText: '<450ms Latencia',
+  },
+];
+---
+
+<!-- BEGIN: Services Catalog (Deep Gradient Rich Cards) -->
+<section class="py-28 bg-white text-neutral-800 relative overflow-hidden" data-purpose="services-catalog" id="servicios">
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="max-w-3xl mb-16 text-left">
+      <div class="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-brand-crimson/10 border border-brand-crimson/20">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-crimson"></span>
+        <span class="text-xs font-mono tracking-widest uppercase text-brand-crimson font-semibold">Capacidades Esenciales</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-neutral-800 mb-4 font-display">
+        Soluciones de IA construidas para producción<span class="text-brand-crimson text-2xl align-top font-sans">®</span>
+      </h2>
+      <p class="text-neutral-600 text-base sm:text-lg font-normal leading-relaxed text-balance">
+        Diseñadas para integrarse en tu operativa, automatizar flujos críticos y generar ROI medible desde el primer mes.
+      </p>
+      <p class="text-neutral-500 text-xs font-mono tracking-wider mt-3 uppercase">
+        Así es como convertimos IA teórica en impacto tangible diario.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+      {
+        cards.map((c) => (
+          <div
+            class={`group relative rounded-3xl p-8 border border-white/10 ${c.borderHover} transition-all duration-500 overflow-hidden flex flex-col justify-between min-h-[400px] shadow-2xl hover:-translate-y-1.5 text-white`}
+            style={c.style}
+          >
+            <div class="relative z-10">
+              <div
+                class={`w-12 h-12 rounded-2xl ${c.iconWrap} backdrop-blur-md flex items-center justify-center mb-8 shadow-lg`}
+                set:html={c.icon}
+              />
+              <div class={`text-xs font-mono uppercase tracking-widest ${c.kicker} mb-2 font-semibold flex items-center gap-1.5`}>
+                <span class={`w-1.5 h-1.5 rounded-full ${c.dot}`} />
+                <span>{c.label}</span>
+              </div>
+              <h3 class={`text-2xl font-bold text-white mb-3 tracking-tight ${c.titleHover} transition-colors`}>{c.title}</h3>
+              <p class="text-neutral-300 text-sm leading-relaxed">{c.text}</p>
+            </div>
+            <div class="relative z-10 pt-8 flex items-center justify-between border-t border-white/10">
+              <a class={`inline-flex items-center gap-2 text-sm font-semibold ${c.link} hover:text-white transition-colors`} href={c.href}>
+                <span>{c.cta}</span>
+                <span>→</span>
+              </a>
+              <span class={`text-[11px] font-mono ${c.badge} px-2 py-0.5 rounded-full border`}>{c.badgeText}</span>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <!-- Bottom Strip -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 pt-10 editorial-border-light">
+      <div class="flex flex-wrap items-center gap-6 text-xs font-mono text-neutral-600">
+        <div class="flex items-center gap-2">
+          <span class="text-brand-crimson font-bold">⚡</span><span class="font-medium text-neutral-800">Código 100% Propietario</span>
+        </div>
+        <span class="text-neutral-300 hidden sm:inline">·</span>
+        <div class="flex items-center gap-2">
+          <span class="text-blue-400 font-bold">◉</span><span class="font-medium text-neutral-800">Despliegue Soberano RGPD</span>
+        </div>
+        <span class="text-neutral-300 hidden sm:inline">·</span>
+        <div class="flex items-center gap-2">
+          <span class="text-brand-coral font-bold">✦</span><span class="font-medium text-neutral-800">Retorno Medible</span>
+        </div>
+      </div>
+      <div>
+        <a
+          class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-neutral-900 hover:bg-brand-crimson text-white text-xs font-mono font-semibold uppercase tracking-wider transition-all duration-300 group shadow-md"
+          href="/servicios"
+        >
+          <span>Ver el catálogo completo de los 12 servicios</span>
+          <span class="transition-transform duration-300 group-hover:translate-x-1 font-sans text-sm">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: Services Catalog -->

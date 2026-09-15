@@ -1,0 +1,14 @@
+{
+  "name": "Quantum Factory — Boutique AI & Data",
+  "short_name": "Quantum Factory",
+  "description": "Ingeniería de inteligencia artificial aplicada: automatización, agentes, datos y consultoría con código 100% propietario.",
+  "lang": "es",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08090D",
+  "theme_color": "#08090D",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,926 @@
+[
+  {
+    "slug": "automatizacion-procesos-ia",
+    "code": "QF·01",
+    "family": "A",
+    "title": "Automatización de procesos con IA",
+    "metaTitle": "Automatización de procesos con IA | Quantum Factory",
+    "description": "Automatizamos tareas repetitivas y procesos internos para reducir trabajo manual, ahorrar tiempo y mejorar la eficiencia de tu empresa.",
+    "summary": "Automatizamos tareas repetitivas y procesos internos para reducir trabajo manual, ahorrar tiempo y mejorar la eficiencia de tu empresa.",
+    "tagline": "Automatizamos tareas repetitivas y procesos internos para reducir trabajo manual, ahorrar tiempo y mejorar la eficiencia de tu empresa.",
+    "problem": "El mismo dato se teclea a mano en dos o tres sitios. Hay hojas de cálculo críticas que solo entiende una persona. El equipo dedica horas cada semana a mover información de un sistema a otro en lugar de a lo que aporta valor.",
+    "solution": "Diseñamos flujos que conectan tus aplicaciones y ejecutan el trabajo repetitivo de principio a fin. Combinamos automatización clásica con IA donde hace falta interpretar: leer un correo libre, clasificar incidencias, extraer datos y disparar acciones.",
+    "capabilities": [
+      {
+        "title": "Conectores a tus herramientas",
+        "text": "Integración bidireccional con CRM, ERP, correo, bases de datos y herramientas internas."
+      },
+      {
+        "title": "Lógica condicional & IA",
+        "text": "Reglas deterministas donde hay certeza e IA para procesar lenguaje natural o excepciones."
+      },
+      {
+        "title": "Ejecución 24/7 sin fallos",
+        "text": "Flujos que corren en servidores seguros con reintentos automáticos y alertas de error."
+      },
+      {
+        "title": "Reducción del error humano",
+        "text": "Validaciones automáticas de datos antes de escribir en sistemas de producción."
+      },
+      {
+        "title": "Trazabilidad y logs",
+        "text": "Registro detallado de cada ejecución para auditoría y monitorización de rendimiento."
+      },
+      {
+        "title": "Mantenimiento y soporte",
+        "text": "Supervisión continua para adaptar los flujos a cambios de APIs o nuevos requisitos."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Mapeo del proceso",
+        "text": "Identificamos las tareas repetitivas, cuellos de botella y sistemas involucrados."
+      },
+      {
+        "title": "Construcción y prueba",
+        "text": "Diseñamos el flujo automatizado en entorno de pruebas con datos reales."
+      },
+      {
+        "title": "Puesta en marcha",
+        "text": "Despliegue en producción con monitorización continua y formación a tu equipo."
+      }
+    ],
+    "outcomes": [
+      "Reducción drástica del trabajo manual administrativo",
+      "Eliminación de retrasos en trasvase de información entre departamentos",
+      "Disponibilidad del proceso 24 horas al día, 7 días a la semana",
+      "Escalabilidad operativa sin necesidad de aumentar plantilla para tareas rutinarias"
+    ],
+    "faq": [
+      {
+        "q": "¿Qué herramientas utilizáis para automatizar?",
+        "a": "Trabajamos con n8n, Make, scripts en Python autoalojados y APIs directas, priorizando soluciones en servidores propios europeos para máxima seguridad."
+      },
+      {
+        "q": "¿Qué pasa si una API o sistema cambia?",
+        "a": "Nuestros flujos incluyen gestión de errores y monitorización de fallos, notificando de inmediato para realizar el ajuste sin pérdida de datos."
+      },
+      {
+        "q": "¿Cuánto tiempo lleva automatizar el primer proceso?",
+        "a": "Un primer proceso funcional suele estar operativo en producción en aproximadamente 2 semanas tras el mapeo inicial."
+      }
+    ],
+    "related": [
+      "agentes-ia-personalizados",
+      "automatizacion-ventas-crm-ia",
+      "integraciones-ia"
+    ]
+  },
+  {
+    "slug": "agentes-ia-personalizados",
+    "code": "QF·02",
+    "family": "A",
+    "title": "Agentes de IA personalizados",
+    "metaTitle": "Agentes de IA personalizados | Quantum Factory",
+    "description": "Creamos agentes de IA capaces de ejecutar tareas, consultar información, utilizar herramientas y completar procesos de forma autónoma.",
+    "summary": "Creamos agentes de IA capaces de ejecutar tareas, consultar información, utilizar herramientas y completar procesos de forma autónoma.",
+    "tagline": "Creamos agentes de IA capaces de ejecutar tareas, consultar información, utilizar herramientas y completar procesos de forma autónoma.",
+    "problem": "La mayoría de herramientas de IA solo responden preguntas simples en un chat. Cuando un proceso requiere consultar tres bases de datos, tomar decisiones intermedias y actualizar un sistema, una persona tiene que empujar cada paso manualmente.",
+    "solution": "Construimos agentes de IA dotados de herramientas, memoria y contexto operativo que perciben el entorno, toman decisiones razonadas dentro de límites controlados y completan el flujo entero de principio a fin.",
+    "capabilities": [
+      {
+        "title": "Orquestación multi-paso",
+        "text": "El agente encadena acciones complejas (buscar, cotejar, decidir, ejecutar) de forma autónoma."
+      },
+      {
+        "title": "Uso real de herramientas",
+        "text": "Conexión segura a tus bases de datos, CRMs, APIs y calendarios mediante llamadas de funciones."
+      },
+      {
+        "title": "Guardarraíles y control",
+        "text": "Reglas estrictas de qué puede hacer solo y cuándo debe solicitar confirmación humana."
+      },
+      {
+        "title": "Memoria y estado persistente",
+        "text": "Retiene el contexto histórico de cada cliente o caso para interactuar con continuidad."
+      },
+      {
+        "title": "Trazabilidad y auditoría",
+        "text": "Cada razonamiento y acción ejecutada queda registrado para supervisión en tiempo real."
+      },
+      {
+        "title": "Modelos adaptados",
+        "text": "Elección del modelo óptimo (abierto o propietario) según coste, latencia y privacidad."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Definición del marco de acción",
+        "text": "Fijamos objetivos, accesos a herramientas y límites estrictos de seguridad."
+      },
+      {
+        "title": "Entrenamiento y prototipo",
+        "text": "Desarrollamos el agente sobre tus casos reales con supervisión humana guiada."
+      },
+      {
+        "title": "Autonomía progresiva",
+        "text": "Despliegue con ampliación gradual de capacidades conforme se validan los resultados."
+      }
+    ],
+    "outcomes": [
+      "Ejecución autónoma de tareas complejas de múltiples etapas",
+      "Liberación de horas de trabajo para el personal especializado",
+      "Resolución inmediata de procesos en cualquier momento del día",
+      "Escalabilidad ilimitada de operaciones sin fricción"
+    ],
+    "faq": [
+      {
+        "q": "¿En qué se diferencia de un simple chatbot?",
+        "a": "Un chatbot solo genera texto en una conversación. Un agente consulta sistemas, evalúa opciones, ejecuta acciones mediante herramientas y resuelve un trabajo completo."
+      },
+      {
+        "q": "¿Puede cometer errores o realizar acciones no deseadas?",
+        "a": "Diseñamos guardarraíles rígidos: el agente opera en un entorno controlado y requiere autorización humana para transacciones o cambios críticos."
+      },
+      {
+        "q": "¿Dónde se ejecutan estos agentes?",
+        "a": "Desplegamos en entornos seguros (servidores dedicados o cloud europea conforme a RGPD) garantizando que tus datos nunca alimentan modelos públicos."
+      }
+    ],
+    "related": [
+      "automatizacion-procesos-ia",
+      "chatbots-atencion-cliente-ia",
+      "integraciones-ia"
+    ]
+  },
+  {
+    "slug": "chatbots-atencion-cliente-ia",
+    "code": "QF·03",
+    "family": "A",
+    "title": "Chatbots y atención al cliente",
+    "metaTitle": "Chatbots y atención al cliente | Quantum Factory",
+    "description": "Desarrollamos asistentes inteligentes para web, WhatsApp y otros canales capaces de responder consultas, gestionar incidencias y atender clientes 24/7.",
+    "summary": "Desarrollamos asistentes inteligentes para web, WhatsApp y otros canales capaces de responder consultas, gestionar incidencias y atender clientes 24/7.",
+    "tagline": "Desarrollamos asistentes inteligentes para web, WhatsApp y otros canales capaces de responder consultas, gestionar incidencias y atender clientes 24/7.",
+    "problem": "Los clientes esperan respuestas inmediatas a cualquier hora, pero los chatbots tradicionales basados en árboles de decisión frustran a los usuarios y el equipo de soporte se satura respondiendo una y otra vez las mismas preguntas.",
+    "solution": "Implementamos asistentes conversacionales con IA generativa que comprenden el lenguaje natural, acceden en tiempo real a tus bases de conocimiento y resuelven dudas, gestionan citas o escalan a soporte humano con todo el contexto listo.",
+    "capabilities": [
+      {
+        "title": "Atención multicanal",
+        "text": "Integración nativa en Webchat, WhatsApp Business, Telegram e Instagram Direct."
+      },
+      {
+        "title": "Conocimiento actualizado",
+        "text": "Conectado a tu catálogo, FAQs, políticas y bases de datos para respuestas precisas."
+      },
+      {
+        "title": "Resolución de incidencias",
+        "text": "Capacidad para consultar estados de pedidos, tramitar reservas o registrar tickets."
+      },
+      {
+        "title": "Tono y personalidad de marca",
+        "text": "Alineado al tono formal, cercano o técnico que tu negocio requiera."
+      },
+      {
+        "title": "Traspaso a agente humano",
+        "text": "Detección de urgencia o frustración para derivar al equipo adecuado al instante."
+      },
+      {
+        "title": "Analítica de consultas",
+        "text": "Informes periódicos con las dudas más recurrentes y oportunidades de mejora."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Auditoría de consultas",
+        "text": "Analizamos el historial de atención para catalogar las preguntas frecuentes y flujos clave."
+      },
+      {
+        "title": "Configuración e integración",
+        "text": "Conectamos el asistente a tus fuentes de datos y canales de mensajería."
+      },
+      {
+        "title": "Calibración y lanzamiento",
+        "text": "Pruebas rigurosas de respuestas y puesta en producción asistida."
+      }
+    ],
+    "outcomes": [
+      "Atención al cliente instantánea 24/7 sin tiempos de espera",
+      "Resolución de más del 70% de consultas sin intervención humana",
+      "Mayor satisfacción del cliente y retención",
+      "Derivación cualificada a soporte humano con historial completo"
+    ],
+    "faq": [
+      {
+        "q": "¿Se puede integrar en nuestro número de WhatsApp actual?",
+        "a": "Sí, integramos a través de la API oficial de WhatsApp Business (Cloud API o BSPs autorizados) sin perder tu número corporativo."
+      },
+      {
+        "q": "¿Qué pasa si el chatbot no sabe una respuesta?",
+        "a": "Reconoce con naturalidad que no tiene ese dato específico y ofrece contactar con un especialista humano o transferir la conversación."
+      },
+      {
+        "q": "¿En qué idiomas puede atender?",
+        "a": "Admite español, inglés, catalán, francés, alemán y prácticamente cualquier idioma con detección automática del lenguaje del usuario."
+      }
+    ],
+    "related": [
+      "agentes-de-voz-ia",
+      "asistentes-internos-empresas",
+      "agentes-ia-personalizados"
+    ]
+  },
+  {
+    "slug": "automatizacion-ventas-crm-ia",
+    "code": "QF·04",
+    "family": "A",
+    "title": "Automatización de ventas y CRM",
+    "metaTitle": "Automatización de ventas y CRM | Quantum Factory",
+    "description": "Automatizamos la captación, cualificación y seguimiento de leads, la actualización del CRM y otras tareas comerciales para que tu equipo pueda centrarse en cerrar ventas.",
+    "summary": "Automatizamos la captación, cualificación y seguimiento de leads, la actualización del CRM y otras tareas comerciales para que tu equipo pueda centrarse en cerrar ventas.",
+    "tagline": "Automatizamos la captación, cualificación y seguimiento de leads, la actualización del CRM y otras tareas comerciales para que tu equipo pueda centrarse en cerrar ventas.",
+    "problem": "Los comerciales pierden hasta el 50% de su jornada introduciendo datos en el CRM, investigando contactos a mano y enviando correos genéricos de seguimiento, dejando escapar oportunidades calientes.",
+    "solution": "Creamos un motor comercial asistido por IA que enriquece automáticamente cada lead que entra, evalúa su encaje, redacta secuencias hiperpersonalizadas y mantiene el pipeline del CRM permanentemente al día.",
+    "capabilities": [
+      {
+        "title": "Captación y enriquecimiento",
+        "text": "Búsqueda automática de datos de contacto, tamaño de empresa y tecnología del prospecto."
+      },
+      {
+        "title": "Scoring inteligente de leads",
+        "text": "Clasificación de prospectos según probabilidad de cierre y valor potencial."
+      },
+      {
+        "title": "Seguimiento personalizado",
+        "text": "Borradores de correos adaptados a las necesidades específicas de cada empresa."
+      },
+      {
+        "title": "Actualización automática del CRM",
+        "text": "Registro de notas de llamada, etapas del funnel y próximas tareas sin teclear."
+      },
+      {
+        "title": "Alertas de oportunidad",
+        "text": "Avisos inmediatos a los comerciales cuando un lead caliente muestra alta intención."
+      },
+      {
+        "title": "Conexión con Hubspot, Salesforce o Pipedrive",
+        "text": "Sincronización fluida con las herramientas comerciales líderes."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Análisis del funnel",
+        "text": "Revisamos tu proceso comercial, criterios de cualificación y herramientas actuales."
+      },
+      {
+        "title": "Automatización de tareas repetitivas",
+        "text": "Conectamos formularios, enriquecedores y CRM con reglas de negocio e IA."
+      },
+      {
+        "title": "Optimización y seguimiento",
+        "text": "Medición de tasas de apertura, respuesta y velocidad del ciclo de ventas."
+      }
+    ],
+    "outcomes": [
+      "Respuesta a nuevos leads en menos de 5 minutos",
+      "Aumento significativo en la tasa de conversión comercial",
+      "CRM 100% actualizado y libre de registros incompletos",
+      "Mayor tiempo de los comerciales dedicado a reuniones y negociación"
+    ],
+    "faq": [
+      {
+        "q": "¿Con qué CRMs podéis trabajar?",
+        "a": "Nos integramos con HubSpot, Salesforce, Pipedrive, Zoho, Holded o cualquier sistema con API abierta."
+      },
+      {
+        "q": "¿Los correos enviados parecen spam o robóticos?",
+        "a": "No; la IA investiga el contexto real del prospecto para crear mensajes contextualmente relevantes y de redacción natural."
+      },
+      {
+        "q": "¿Cómo se garantiza que no se moleste a clientes existentes?",
+        "a": "Aplicamos filtros de exclusión estrictos contra tu base de datos actual y listas de supresión."
+      }
+    ],
+    "related": [
+      "automatizacion-procesos-ia",
+      "chatbots-atencion-cliente-ia",
+      "integraciones-ia"
+    ]
+  },
+  {
+    "slug": "generacion-contenido-ia",
+    "code": "QF·05",
+    "family": "B",
+    "title": "Generación de contenido con IA",
+    "metaTitle": "Generación de contenido con IA | Quantum Factory",
+    "description": "Creamos sistemas para generar contenido de forma más rápida y escalable: publicaciones, artículos, newsletters, anuncios, imágenes, vídeos y fichas de producto.",
+    "summary": "Creamos sistemas para generar contenido de forma más rápida y escalable: publicaciones, artículos, newsletters, anuncios, imágenes, vídeos y fichas de producto.",
+    "tagline": "Creamos sistemas para generar contenido de forma más rápida y escalable: publicaciones, artículos, newsletters, anuncios, imágenes, vídeos y fichas de producto.",
+    "problem": "Mantener una presencia de contenido constante en múltiples canales exige un esfuerzo enorme. El texto genérico de ChatGPT no tiene identidad propia y la producción manual se vuelve un cuello de botella costoso.",
+    "solution": "Estructuramos factorías de contenido asistidas por IA que aprenden el tono de voz, directrices de marca y fuentes de tu empresa para producir artículos, creatividades, copys y fichas de catálogo con consistencia profesional.",
+    "capabilities": [
+      {
+        "title": "Guía de estilo y tono de marca",
+        "text": "Modelos calibrados para escribir exactamente como tu empresa, sin sonar a plantilla."
+      },
+      {
+        "title": "Fichas de producto a gran escala",
+        "text": "Generación masiva y optimizada para SEO de descripciones de e-commerce y catálogos."
+      },
+      {
+        "title": "Automatización de newsletters",
+        "text": "Curación inteligente de noticias del sector y redacción de resúmenes editoriales."
+      },
+      {
+        "title": "Copys y anuncios multivariante",
+        "text": "Generación de decenas de variantes de titulares y textos publicitarios para test A/B."
+      },
+      {
+        "title": "Generación de activos visuales",
+        "text": "Creación de imágenes y soporte audiovisual alineado con la identidad corporativa."
+      },
+      {
+        "title": "Revisión y validación editorial",
+        "text": "Flujos con aprobación humana previa a la publicación en CMS o redes."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Codificación del tono de voz",
+        "text": "Definimos manual de marca, ejemplos de referencia y criterios editoriales."
+      },
+      {
+        "title": "Diseño de la factoría de contenido",
+        "text": "Automatizamos la ingesta de fuentes, generación y maquetación de borradores."
+      },
+      {
+        "title": "Entrenamiento del equipo",
+        "text": "Capacitación a tu equipo de marketing para validar y refinar en minutos."
+      }
+    ],
+    "outcomes": [
+      "Multiplicación por 5x de la capacidad de producción de contenido",
+      "Coherencia total del tono en todos los canales digitales",
+      "Reducción drástica del coste por pieza de contenido producida",
+      "Agilidad para lanzar campañas y productos al mercado"
+    ],
+    "faq": [
+      {
+        "q": "¿El contenido generado penaliza en Google SEO?",
+        "a": "No; Google premia el contenido útil, riguroso y bien estructurado independientemente de cómo se elabore, asegurando siempre valor real para el lector."
+      },
+      {
+        "q": "¿Podemos editar el contenido antes de publicarlo?",
+        "a": "Absolutamente; el sistema genera borradores listos que tu equipo puede revisar, enriquecer y aprobar con un clic."
+      },
+      {
+        "q": "¿Funciona para catálogos con miles de referencias?",
+        "a": "Es uno de sus usos más potentes: procesamos bases de datos para generar títulos, atributos y descripciones únicas a escala."
+      }
+    ],
+    "related": [
+      "asistentes-internos-empresas",
+      "procesamiento-documentos-ia",
+      "soluciones-ia-a-medida"
+    ]
+  },
+  {
+    "slug": "asistentes-internos-empresas",
+    "code": "QF·06",
+    "family": "B",
+    "title": "Asistentes internos para empresas",
+    "metaTitle": "Asistentes internos para empresas | Quantum Factory",
+    "description": "Desarrollamos asistentes privados conectados al conocimiento de tu empresa para consultar documentación, procedimientos y datos internos mediante lenguaje natural.",
+    "summary": "Desarrollamos asistentes privados conectados al conocimiento de tu empresa para consultar documentación, procedimientos y datos internos mediante lenguaje natural.",
+    "tagline": "Desarrollamos asistentes privados conectados al conocimiento de tu empresa para consultar documentación, procedimientos y datos internos mediante lenguaje natural.",
+    "problem": "Los manuales de procedimiento, políticas, contratos y guías técnicas están dispersos en carpetas compartidas, Notion o Google Drive. Los empleados pierden horas buscando información o interrumpiendo a compañeros veteranos.",
+    "solution": "Implementamos un asistente privado con arquitectura RAG (Retrieval-Augmented Generation) conectado a tu documentación corporativa. Permite a cualquier miembro del equipo hacer preguntas en lenguaje natural y obtener respuestas precisas con citas a los documentos fuente.",
+    "capabilities": [
+      {
+        "title": "Búsqueda semántica (RAG)",
+        "text": "Recuperación de la información exacta dentro de miles de documentos técnicos o normativos."
+      },
+      {
+        "title": "Citas y fuentes verificables",
+        "text": "Cada respuesta indica el documento, página y párrafo exacto de donde procede."
+      },
+      {
+        "title": "Privacidad y control de accesos",
+        "text": "Cumplimiento estricto de permisos: cada usuario solo accede a los datos autorizados."
+      },
+      {
+        "title": "Conectores a Drive, SharePoint, Notion",
+        "text": "Sincronización continua de carpetas y espacios de trabajo existentes."
+      },
+      {
+        "title": "Despliegue local o nube europea",
+        "text": "Garantía de que la documentación confidencial nunca se expone a terceros."
+      },
+      {
+        "title": "Onboarding de empleados acelerado",
+        "text": "Los nuevos miembros del equipo resuelven dudas operativas desde el primer día."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Inventario documental",
+        "text": "Auditamos los repositorios y formatos (PDF, Word, Markdown, bases de datos)."
+      },
+      {
+        "title": "Indexación vectorial y seguridad",
+        "text": "Procesamos y vectorizamos los contenidos con segmentación de permisos."
+      },
+      {
+        "title": "Despliegue interno",
+        "text": "Integración en Slack, Teams o portal web corporativo privado."
+      }
+    ],
+    "outcomes": [
+      "Reducción del 80% en tiempo dedicado a buscar procedimientos internos",
+      "Onboarding de nuevo personal el doble de rápido",
+      "Eliminación de respuestas contradictorias o desactualizadas",
+      "Protección total de la propiedad intelectual y el secreto empresarial"
+    ],
+    "faq": [
+      {
+        "q": "¿Nuestra información confidencial estará segura?",
+        "a": "Totalmente; implementamos entornos cerrados en la UE o en tu propia infraestructura donde ningún dato se comparte ni se usa para entrenar modelos externos."
+      },
+      {
+        "q": "¿Qué formatos de archivo admite?",
+        "a": "PDFs, Word, Excel, PowerPoint, Markdown, páginas web, Notion, SharePoint, Google Docs y transcripciones de audio/vídeo."
+      },
+      {
+        "q": "¿Inventa respuestas o \"alucina\"?",
+        "a": "La arquitectura RAG restringe al modelo para que responda únicamente en base a los fragmentos de documentos recuperados, indicando \"no dispongo de esa información\" si no está en la fuente."
+      }
+    ],
+    "related": [
+      "procesamiento-documentos-ia",
+      "analisis-datos-ia",
+      "agentes-ia-personalizados"
+    ]
+  },
+  {
+    "slug": "procesamiento-documentos-ia",
+    "code": "QF·07",
+    "family": "B",
+    "title": "Procesamiento inteligente de documentos",
+    "metaTitle": "Procesamiento inteligente de documentos | Quantum Factory",
+    "description": "Automatizamos la lectura, extracción y clasificación de información procedente de facturas, contratos, formularios, PDFs, correos y otros documentos.",
+    "summary": "Automatizamos la lectura, extracción y clasificación de información procedente de facturas, contratos, formularios, PDFs, correos y otros documentos.",
+    "tagline": "Automatizamos la lectura, extracción y clasificación de información procedente de facturas, contratos, formularios, PDFs, correos y otros documentos.",
+    "problem": "Cientos de facturas, albaranes, nóminas o escrituras llegan en formatos heterogéneos, escaneados o fotocopiados. Picarlos a mano en el ERP es lento, propenso a errores y un desperdicio del talento del equipo administrativo.",
+    "solution": "Desplegamos pipelines de visión computacional y modelos multimodales que leen cualquier documento, entienden su estructura y extraen tablas, importes, cláusulas y campos clave con precisión quirúrgica para inyectarlos en tu software de gestión.",
+    "capabilities": [
+      {
+        "title": "OCR de última generación",
+        "text": "Lectura de documentos complejos, escaneos de baja resolución y tablas multipágina."
+      },
+      {
+        "title": "Extracción estructurada en JSON",
+        "text": "Transformación directa de texto no estructurado en campos listos para base de datos."
+      },
+      {
+        "title": "Clasificación y enrutamiento",
+        "text": "Detección automática del tipo de documento y envío al departamento correspondiente."
+      },
+      {
+        "title": "Validación cruzada de datos",
+        "text": "Cotejo automático de importes, CIFs, fechas y totales para evitar discrepancias."
+      },
+      {
+        "title": "Integración con ERPs y contabilidad",
+        "text": "Conexión con SAP, Sage, Holded, Navision o software a medida."
+      },
+      {
+        "title": "Bandeja de excepciones",
+        "text": "Los casos dudosos se presentan al operador humano con el campo marcado para validar con 1 clic."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Muestreo de documentos",
+        "text": "Analizamos tipologías habituales de facturas, contratos o expedientes."
+      },
+      {
+        "title": "Calibración de modelos de extracción",
+        "text": "Configuración del pipeline de OCR y esquemas de datos esperados."
+      },
+      {
+        "title": "Integración contable y despliegue",
+        "text": "Conexión a tu software ERP y automatización de la ingesta documental."
+      }
+    ],
+    "outcomes": [
+      "Procesamiento de documentos en segundos en lugar de días",
+      "Ahorro del 85% de tiempo en tareas de contabilidad y administración",
+      "Eliminación prácticamente total de errores en números de factura e importes",
+      "Cierre contable mensual mucho más ágil y ordenado"
+    ],
+    "faq": [
+      {
+        "q": "¿Funciona si los proveedores usan formatos y diseños distintos?",
+        "a": "Sí; a diferencia del OCR por plantillas tradicional, la IA comprende semánticamente el concepto (\"Total\", \"IVA\", \"Fecha de emisión\") sin importar dónde esté situado en la página."
+      },
+      {
+        "q": "¿Qué nivel de acierto se alcanza?",
+        "a": "Supera el 98% en documentos legibles. Además, el sistema incluye umbrales de confianza para enviar a revisión humana solo los casos con dudas."
+      },
+      {
+        "q": "¿Se puede procesar documentos manuscritos?",
+        "a": "Sí, disponemos de modelos especializados en caligrafía y notas manuscritas con altos índices de precisión."
+      }
+    ],
+    "related": [
+      "automatizacion-procesos-ia",
+      "asistentes-internos-empresas",
+      "integraciones-ia"
+    ]
+  },
+  {
+    "slug": "analisis-datos-ia",
+    "code": "QF·08",
+    "family": "C",
+    "title": "Análisis de datos con IA",
+    "metaTitle": "Análisis de datos con IA | Quantum Factory",
+    "description": "Convertimos datos en información útil mediante informes automáticos, consultas en lenguaje natural, detección de patrones, alertas y análisis inteligentes.",
+    "summary": "Convertimos datos en información útil mediante informes automáticos, consultas en lenguaje natural, detección de patrones, alertas y análisis inteligentes.",
+    "tagline": "Convertimos datos en información útil mediante informes automáticos, consultas en lenguaje natural, detección de patrones, alertas y análisis inteligentes.",
+    "problem": "Las empresas acumulan gigabytes de datos en bases de datos, pasarelas de pago y analítica web, pero nadie tiene tiempo de construir dashboards complejos que casi nadie consulta y las decisiones se siguen tomando por intuición.",
+    "solution": "Transformamos tus datos en una fuente viva y consultable. Permitimos a los directivos preguntar a sus datos en lenguaje natural (\"¿cuál fue el producto con mayor margen en Valencia el mes pasado?\") y recibir respuestas inmediatas con gráficos y explicaciones claras.",
+    "capabilities": [
+      {
+        "title": "Text-to-SQL y consultas conversacionales",
+        "text": "Pregunta en español y obtén la consulta técnica y los datos de inmediato."
+      },
+      {
+        "title": "Informes ejecutivos automáticos",
+        "text": "Resúmenes semanales y mensuales autogenerados con los KPIs críticos y variaciones."
+      },
+      {
+        "title": "Detección proactiva de anomalías",
+        "text": "Alertas tempranas ante caídas de ventas, picos de devoluciones o costes anómalos."
+      },
+      {
+        "title": "Segmentación avanzada de clientes",
+        "text": "Agrupación basada en comportamiento real de compra y riesgo de abandono (churn)."
+      },
+      {
+        "title": "Visualizaciones dinámicas",
+        "text": "Gráficos generados sobre la marcha adaptados a la pregunta formulada."
+      },
+      {
+        "title": "Seguridad en capas",
+        "text": "Consultas seguras sin riesgo de borrado o inyección de código."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Conexión a fuentes de datos",
+        "text": "Conectamos a PostgreSQL, MySQL, BigQuery, Snowflake o archivos planos."
+      },
+      {
+        "title": "Mapeo de métricas del negocio",
+        "text": "Definimos el diccionario de conceptos para que la IA entienda tus fórmulas."
+      },
+      {
+        "title": "Activación de asistentes y alertas",
+        "text": "Despliegue de la interfaz de consulta e informes automáticos periódicos."
+      }
+    ],
+    "outcomes": [
+      "Acceso democrático a los datos de la empresa sin depender del equipo de BI",
+      "Detección de problemas y oportunidades semanas antes de lo habitual",
+      "Informes ejecutivos de alta calidad generados sin esfuerzo manual",
+      "Decisiones fundamentadas en datos rigurosos y actualizados al minuto"
+    ],
+    "faq": [
+      {
+        "q": "¿La IA puede modificar o borrar mis bases de datos?",
+        "a": "No; los agentes analíticos operan con credenciales de solo lectura y en entornos sandbox protegidos."
+      },
+      {
+        "q": "¿Qué pasa si mi base de datos no está limpia o tiene nombres crípticos?",
+        "a": "Construimos una capa semántica intermedia que traduce los nombres técnicos a conceptos de negocio comprensibles."
+      },
+      {
+        "q": "¿Se puede conectar con hojas de cálculo de Excel o Google Sheets?",
+        "a": "Sí, podemos integrar tanto bases de datos SQL como almacenes en hojas de cálculo y data warehouses modernos."
+      }
+    ],
+    "related": [
+      "asistentes-internos-empresas",
+      "integraciones-ia",
+      "soluciones-ia-a-medida"
+    ]
+  },
+  {
+    "slug": "agentes-de-voz-ia",
+    "code": "QF·09",
+    "family": "A",
+    "title": "Agentes de voz",
+    "metaTitle": "Agentes de voz | Quantum Factory",
+    "description": "Creamos agentes de IA capaces de realizar y recibir llamadas para atención al cliente, reservas, confirmaciones, soporte y cualificación de leads.",
+    "summary": "Creamos agentes de IA capaces de realizar y recibir llamadas para atención al cliente, reservas, confirmaciones, soporte y cualificación de leads.",
+    "tagline": "Creamos agentes de IA capaces de realizar y recibir llamadas para atención al cliente, reservas, confirmaciones, soporte y cualificación de leads.",
+    "problem": "Las llamadas telefónicas siguen siendo el canal preferido de millones de clientes, pero mantener un call center o recepcionista dedicado es costoso y las llamadas perdidas fuera de horario se traducen directamente en ventas perdidas.",
+    "solution": "Desarrollamos agentes de voz ultra-realistas con latencias inferiores a un segundo que conversan con entonación natural, gestionan citas, confirman asistencias, cualifican prospectos o resuelven dudas telefónicas 24/7 sin colas de espera.",
+    "capabilities": [
+      {
+        "title": "Voz hiperrealista y natural",
+        "text": "Pronunciación impecable en español y otros idiomas con inflexiones humanas."
+      },
+      {
+        "title": "Baja latencia (<800ms)",
+        "text": "Conversaciones fluidas sin los silencios incómodos de los sistemas antiguos."
+      },
+      {
+        "title": "Llamadas entrantes y salientes",
+        "text": "Atención telefónica de recepción o campañas automatizadas de llamada a leads."
+      },
+      {
+        "title": "Integración con calendarios y CRM",
+        "text": "Agendado directo en Google Calendar, Calendly o actualización en el CRM durante la llamada."
+      },
+      {
+        "title": "Detección de interrupciones",
+        "text": "El agente escucha y reacciona si el interlocutor le interrumpe, como una persona real."
+      },
+      {
+        "title": "Grabación y transcripción completa",
+        "text": "Resumen ejecutivo de cada llamada enviado a tu correo o registrado en el sistema."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Diseño del guión y flujo conversacional",
+        "text": "Definimos los objetivos de la llamada, objeciones típicas y datos a recabar."
+      },
+      {
+        "title": "Elección de voz y calibración técnica",
+        "text": "Ajuste de timbre, tono, velocidad de respuesta y enlaces con tus sistemas."
+      },
+      {
+        "title": "Pruebas piloto y puesta en producción",
+        "text": "Simulaciones controladas y despliegue sobre tu centralita o líneas dedicadas."
+      }
+    ],
+    "outcomes": [
+      "Cero llamadas perdidas en tu empresa, 24 horas al día, 365 días al año",
+      "Agendamiento y confirmación de citas en piloto automático",
+      "Coste por llamada hasta un 80% menor que un call center convencional",
+      "Cualificación telefónica inmediata de prospectos web entrantes"
+    ],
+    "faq": [
+      {
+        "q": "¿Se nota que es una inteligencia artificial?",
+        "a": "La voz, pronunciación y reactividad son tan naturales que la gran mayoría de usuarios perciben una conversación profesional fluida sin frustración."
+      },
+      {
+        "q": "¿Se puede integrar en nuestra centralita telefónica actual?",
+        "a": "Sí, conectamos mediante enlaces SIP, VoIP o numeración telefónica dedicada (números fijos locales o 900)."
+      },
+      {
+        "q": "¿Qué sucede si el cliente solicita hablar con un humano?",
+        "a": "El agente transfiere la llamada a la extensión de tu equipo o toma nota de los detalles para que le devuelvan la llamada."
+      }
+    ],
+    "related": [
+      "chatbots-atencion-cliente-ia",
+      "automatizacion-ventas-crm-ia",
+      "agentes-ia-personalizados"
+    ]
+  },
+  {
+    "slug": "soluciones-ia-a-medida",
+    "code": "QF·10",
+    "family": "C",
+    "title": "Soluciones de IA a medida",
+    "metaTitle": "Soluciones de IA a medida | Quantum Factory",
+    "description": "Diseñamos e integramos soluciones personalizadas de inteligencia artificial adaptadas a los procesos, productos y necesidades específicas de cada empresa.",
+    "summary": "Diseñamos e integramos soluciones personalizadas de inteligencia artificial adaptadas a los procesos, productos y necesidades específicas de cada empresa.",
+    "tagline": "Diseñamos e integramos soluciones personalizadas de inteligencia artificial adaptadas a los procesos, productos y necesidades específicas de cada empresa.",
+    "problem": "Las herramientas SaaS estándar son genéricas y obligan a tu empresa a cambiar su forma de trabajar para adaptarse a ellas. Cuando tienes una ventaja competitiva o un flujo de negocio único, el software comercial se queda corto.",
+    "solution": "Construimos aplicaciones, microservicios y sistemas de inteligencia artificial totalmente a medida. Desarrollamos la arquitectura que tu operativa exige, con código propietario que pasa a ser activo exclusivo de tu compañía.",
+    "capabilities": [
+      {
+        "title": "Arquitectura a medida",
+        "text": "Diseño de sistemas optimizados específicamente para tu modelo de negocio y escala."
+      },
+      {
+        "title": "Propiedad total del código",
+        "text": "Todo el desarrollo, modelos afinados y flujos son 100% de tu empresa, sin licencias cautivas."
+      },
+      {
+        "title": "Modelos optimizados y fine-tuning",
+        "text": "Ajuste fino de modelos de lenguaje sobre tu propia terminología y datos históricos."
+      },
+      {
+        "title": "APIs y microservicios escalables",
+        "text": "Despliegues en contenedores Docker y Kubernetes listos para soportar alta demanda."
+      },
+      {
+        "title": "Cumplimiento normativo y seguridad",
+        "text": "Alineado con RGPD y la Ley Europea de Inteligencia Artificial (AI Act)."
+      },
+      {
+        "title": "Transferencia de conocimiento",
+        "text": "Documentación completa y acompañamiento a tu equipo técnico interno."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Ingeniería de requisitos",
+        "text": "Analizamos a fondo la necesidad técnica, restricciones y objetivos comerciales."
+      },
+      {
+        "title": "Prueba de concepto (PoC)",
+        "text": "Validamos la viabilidad con un prototipo funcional en menos de 3 semanas."
+      },
+      {
+        "title": "Desarrollo, despliegue y soporte",
+        "text": "Construcción del sistema final en producción con soporte continuo y evolución."
+      }
+    ],
+    "outcomes": [
+      "Solución perfectamente amoldada a tu proceso sin dependencias de terceros",
+      "Creación de una ventaja competitiva duradera en tu sector",
+      "Activo tecnológico propio que incrementa la valoración de tu empresa",
+      "Retorno de inversión directo y medible en semanas"
+    ],
+    "faq": [
+      {
+        "q": "¿De quién es el código y los modelos generados?",
+        "a": "Son 100% tuyos. Entregamos repositorios, credenciales y documentación para que tengas independencia total."
+      },
+      {
+        "q": "¿Cómo gestionáis el mantenimiento a largo plazo?",
+        "a": "Ofrecemos contratos de soporte, mantenimiento y evolución tecnológica, o bien formamos a tu equipo interno si prefieres gestionarlo dentro."
+      },
+      {
+        "q": "¿Cuánto dura un desarrollo a medida típico?",
+        "a": "Tras la prueba de concepto inicial (2-3 semanas), los proyectos suelen entregarse en fases de 4 a 8 semanas con hitos medibles."
+      }
+    ],
+    "related": [
+      "integraciones-ia",
+      "consultoria-estrategia-ia",
+      "agentes-ia-personalizados"
+    ]
+  },
+  {
+    "slug": "integraciones-ia",
+    "code": "QF·11",
+    "family": "C",
+    "title": "Integraciones de IA",
+    "metaTitle": "Integraciones de IA | Quantum Factory",
+    "description": "Conectamos la inteligencia artificial con las herramientas que ya utiliza tu empresa: CRM, ERP, WhatsApp, Slack, Gmail, Notion, bases de datos y APIs.",
+    "summary": "Conectamos la inteligencia artificial con las herramientas que ya utiliza tu empresa: CRM, ERP, WhatsApp, Slack, Gmail, Notion, bases de datos y APIs.",
+    "tagline": "Conectamos la inteligencia artificial con las herramientas que ya utiliza tu empresa: CRM, ERP, WhatsApp, Slack, Gmail, Notion, bases de datos y APIs.",
+    "problem": "Comprar otra plataforma aislada obliga a los empleados a cambiar de pestaña constantemente. La IA solo aporta valor real cuando vive dentro de las herramientas donde el equipo ya trabaja todos los días.",
+    "solution": "Integramos modelos avanzados de IA directamente en tu ecosistema existente: tu correo, tu CRM, tus canales de Slack o Teams, tus hojas de cálculo y tus sistemas centrales, sin obligar a cambiar de herramientas.",
+    "capabilities": [
+      {
+        "title": "Conectores con más de 200 herramientas",
+        "text": "HubSpot, Salesforce, Notion, Google Workspace, Microsoft 365, Slack, Stripe y más."
+      },
+      {
+        "title": "Desarrollo de Webhooks y APIs a medida",
+        "text": "Puentes de comunicación seguros y eficientes entre software legado y modelos de IA."
+      },
+      {
+        "title": "Automatización de eventos en tiempo real",
+        "text": "Disparadores instantáneos cuando sucede algo en cualquier parte de tu infraestructura."
+      },
+      {
+        "title": "Seguridad y encriptación en tránsito",
+        "text": "Protocolos TLS/HTTPS y autenticación OAuth2 para proteger cada intercambio de datos."
+      },
+      {
+        "title": "Monitorización de llamadas de API",
+        "text": "Panel de control de consumos, costes de tokens y tiempos de respuesta."
+      },
+      {
+        "title": "Cero fricción para el usuario",
+        "text": "El equipo interactúa con la IA sin salir de la aplicación que ya domina."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Mapeo de arquitectura técnica",
+        "text": "Catalogamos los sistemas actuales, APIs disponibles y flujos de información."
+      },
+      {
+        "title": "Diseño de los conectores seguros",
+        "text": "Desarrollamos e implementamos los puentes y middlewares necesarios."
+      },
+      {
+        "title": "Pruebas de estrés y entrega",
+        "text": "Validación de carga, verificación de seguridad y activación sin interrupciones."
+      }
+    ],
+    "outcomes": [
+      "Adopción inmediata por parte del equipo al no tener que aprender nuevas interfaces",
+      "Flujo continuo de información entre sistemas previamente desconectados",
+      "Optimización radical del coste de herramientas de terceros",
+      "Infraestructura unificada, moderna y preparada para futuras expansiones"
+    ],
+    "faq": [
+      {
+        "q": "¿Se puede conectar con un software antiguo (on-premise o legado)?",
+        "a": "Sí; hemos conectado sistemas desarrollados hace años a través de bases de datos intermedias, SFTP o túneles seguros."
+      },
+      {
+        "q": "¿Afecta al rendimiento de nuestras herramientas habituales?",
+        "a": "No; los procesamientos pesados se realizan de forma asíncrona en microservicios independientes sin ralentizar tu software."
+      },
+      {
+        "q": "¿Cómo se controlan los costes de consumo de las APIs de IA?",
+        "a": "Establecemos límites duros de cuota, balanceo de modelos según complejidad y caché semántica para no repetir consultas innecesarias."
+      }
+    ],
+    "related": [
+      "automatizacion-procesos-ia",
+      "soluciones-ia-a-medida",
+      "automatizacion-ventas-crm-ia"
+    ]
+  },
+  {
+    "slug": "consultoria-estrategia-ia",
+    "code": "QF·12",
+    "family": "D",
+    "title": "Consultoría y estrategia de IA",
+    "metaTitle": "Consultoría y estrategia de IA | Quantum Factory",
+    "description": "Analizamos tu empresa para detectar oportunidades de automatización, definir casos de uso y crear una estrategia de implementación de IA con impacto real.",
+    "summary": "Analizamos tu empresa para detectar oportunidades de automatización, definir casos de uso y crear una estrategia de implementación de IA con impacto real.",
+    "tagline": "Analizamos tu empresa para detectar oportunidades de automatización, definir casos de uso y crear una estrategia de implementación de IA con impacto real.",
+    "problem": "Todo el mundo habla de inteligencia artificial, pero la mayoría de directivos no saben por dónde empezar, qué casos de uso son rentables y cuáles son una pérdida de tiempo y presupuesto.",
+    "solution": "Realizamos un diagnóstico exhaustivo de tu empresa. Identificamos los cuellos de botella reales, evaluamos la viabilidad técnica y trazamos una hoja de ruta priorizada por retorno de inversión (ROI) y facilidad de ejecución.",
+    "capabilities": [
+      {
+        "title": "Auditoría y mapeo de procesos",
+        "text": "Revisión con los responsables de departamento para detectar ineficiencias monetizables."
+      },
+      {
+        "title": "Matriz de impacto vs. esfuerzo",
+        "text": "Priorización matemática de casos de uso para empezar por los \"quick wins\" de mayor ROI."
+      },
+      {
+        "title": "Hoja de ruta tecnológica (Roadmap)",
+        "text": "Plan cronológico de implementación por fases con estimación de costes y plazos."
+      },
+      {
+        "title": "Evaluación de seguridad y legalidad",
+        "text": "Revisión de riesgos conforme al RGPD y la Ley de Inteligencia Artificial de la UE."
+      },
+      {
+        "title": "Cálculo del ROI proyectado",
+        "text": "Modelización financiera del ahorro de horas y aumento de ingresos esperado."
+      },
+      {
+        "title": "Acompañamiento en la dirección (Advisory)",
+        "text": "Sesiones periódicas de seguimiento estratégico para asegurar el éxito del despliegue."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Entrevistas de diagnóstico",
+        "text": "Sesiones breves con líderes de área para entender operativa y problemas clave."
+      },
+      {
+        "title": "Evaluación técnica y viabilidad",
+        "text": "Análisis de calidad de datos, sistemas y recursos necesarios."
+      },
+      {
+        "title": "Entrega de la hoja de ruta",
+        "text": "Presentación ejecutiva con los proyectos priorizados, presupuestos y retorno esperado."
+      }
+    ],
+    "outcomes": [
+      "Claridad absoluta sobre qué proyectos de IA ejecutar y cuáles descartar",
+      "Alineación entre dirección general, operaciones y equipo técnico",
+      "Plan de acción concreto con retorno medible desde el primer trimestre",
+      "Ahorro de miles de euros en software inútil o proyectos fallidos"
+    ],
+    "faq": [
+      {
+        "q": "¿Para qué tamaño de empresa está pensado?",
+        "a": "Trabajamos con pymes consolidadas y medianas empresas (desde 10 hasta cientos de empleados) que tienen procesos estables que optimizar."
+      },
+      {
+        "q": "¿Incluye la consultoría el posterior desarrollo técnico?",
+        "a": "Te entregamos una hoja de ruta que puedes ejecutar con nosotros o con tu propio equipo interno; la consultoría tiene valor por sí misma."
+      },
+      {
+        "q": "¿Cuánto tiempo requiere este proceso por parte de nuestro equipo?",
+        "a": "Diseñamos el proceso para ser muy ágil: solo necesitamos unas 3 a 5 horas repartidas en entrevistas clave a lo largo de dos semanas."
+      }
+    ],
+    "related": [
+      "automatizacion-procesos-ia",
+      "soluciones-ia-a-medida",
+      "integraciones-ia"
+    ]
+  }
+]

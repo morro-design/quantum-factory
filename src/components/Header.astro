@@ -1,0 +1,89 @@
+---
+import { services, serviceUrl } from '../data/services';
+
+const logoSrc = '/logo-lima.svg';
+---
+
+<!-- BEGIN: Navigation Header -->
+<header
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/[0.06] bg-brand-midnight/90 backdrop-blur-md"
+>
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <!-- Brand Logo Left -->
+    <a class="flex items-center gap-3 group" data-purpose="site-logo" href="/">
+      <img
+        alt="Quantum Factory"
+        class="h-6 w-auto object-contain transition-opacity group-hover:opacity-90"
+        src={logoSrc}
+      />
+      <span
+        class="hidden sm:inline-block text-[11px] uppercase tracking-widest text-brand-muted font-mono border-l border-white/10 pl-3"
+        >Boutique AI · Data</span
+      >
+    </a>
+    <!-- Center Minimalist Navigation Links -->
+    <nav class="hidden md:flex items-center gap-9 text-sm font-medium text-brand-muted tracking-tight">
+      <div class="relative group py-2">
+        <button
+          class="flex items-center gap-1.5 hover:text-white transition-colors duration-200 text-sm font-medium text-brand-muted tracking-tight focus:outline-none"
+          type="button"
+        >
+          <span>Servicios</span>
+          <svg
+            class="w-3.5 h-3.5 text-brand-muted group-hover:text-brand-lima transition-transform duration-200 group-hover:rotate-180"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+        <div
+          class="absolute left-0 top-full pt-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 w-[580px] -ml-16"
+        >
+          <div class="p-4 rounded-2xl bg-[#0C0D13]/95 backdrop-blur-md border border-white/10 shadow-2xl">
+            <div
+              class="text-[11px] font-mono tracking-widest uppercase text-brand-lima px-3 py-1 mb-2 border-b border-white/5 flex items-center justify-between"
+            >
+              <span>Catálogo de Soluciones</span>
+              <span class="text-white/40 font-mono">12 Capacidades</span>
+            </div>
+            <div class="grid grid-cols-2 gap-1">
+              {
+                services.map((s, i) => (
+                  <a
+                    class="flex items-start gap-2.5 p-2 rounded-lg hover:bg-white/5 transition-colors group/item"
+                    href={serviceUrl(s.slug)}
+                  >
+                    <span class="text-[11px] font-mono text-brand-lima/70 group-hover/item:text-brand-lima mt-0.5">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <div>
+                      <div class="text-xs font-medium text-white group-hover/item:text-brand-lima transition-colors">
+                        {s.title}
+                      </div>
+                    </div>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="hover:text-white transition-colors duration-200" href="/#metodo">Método</a>
+      <a class="hover:text-white transition-colors duration-200" href="/#diferenciales">Por qué QF</a>
+      <a class="hover:text-white transition-colors duration-200" href="/#contacto">Contacto</a>
+    </nav>
+    <!-- Action Button Right -->
+    <div class="flex items-center gap-4">
+      <a
+        class="inline-flex items-center gap-2 text-xs font-semibold px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/15 transition-all duration-200 hover:border-brand-lima hover:text-brand-lima"
+        href="/#contacto"
+      >
+        <span>Agendar diagnóstico</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-lima animate-pulse"></span>
+      </a>
+    </div>
+  </div>
+</header>
+<!-- END: Navigation Header -->

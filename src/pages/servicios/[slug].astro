@@ -1,0 +1,374 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { services, families, getService, serviceUrl, detailShared as shared } from '../../data/services';
+import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from '../../data/seo';
+
+export function getStaticPaths() {
+  return services.map((s) => ({ params: { slug: s.slug } }));
+}
+
+const { slug } = Astro.params;
+const service = getService(slug!)!;
+const fam = families[service.family];
+const related = service.related.map((r) => getService(r)!).filter(Boolean);
+const index = services.findIndex((s) => s.slug === service.slug) + 1;
+const n = String(index).padStart(2, '0');
+const jsonLd = [
+  serviceJsonLd(service),
+  breadcrumbJsonLd([
+    { name: 'Inicio', path: '/' },
+    { name: 'Servicios', path: '/servicios' },
+    { name: service.title, path: serviceUrl(service.slug) },
+  ]),
+  faqJsonLd(service),
+];
+---
+
+<Layout
+  title={service.metaTitle}
+  description={service.description}
+  canonical={serviceUrl(service.slug)}
+  ogType="article"
+  keywords={[service.title, families[service.family].name, 'inteligencia artificial', 'Quantum Factory']}
+  jsonLd={jsonLd}
+>
+  <Header />
+  <main>
+    <!-- BEGIN: Service Hero -->
+    <section class="relative pt-36 pb-20 overflow-hidden bg-brand-midnight" data-purpose="service-hero">
+      <!-- Family-tinted orb -->
+      <div
+        class="absolute -right-32 sm:-right-16 top-8 w-[420px] h-[420px] lg:w-[560px] lg:h-[560px] rounded-full z-0 pointer-events-none select-none opacity-70"
+        style={`background: ${fam.gradient}; box-shadow: 0 0 120px rgba(255, 107, 122, 0.08); filter: blur(2px);`}
+      >
+      </div>
+      <!-- Star accent -->
+      <div class="absolute right-[8%] top-28 w-10 h-10 z-10 pointer-events-none select-none opacity-60 hidden md:block">
+        <img alt="" class="w-full h-full object-contain filter drop-shadow-[0_0_20px_rgba(204,255,0,0.35)]" src="/star-lima.svg" />
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6">
+        <!-- Breadcrumb -->
+        <nav class="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-brand-muted mb-10" aria-label="Breadcrumb">
+          <a class="hover:text-white transition-colors" href="/">Inicio</a>
+          <span class="text-white/20">/</span>
+          <a class="hover:text-white transition-colors" href="/servicios">Servicios</a>
+          <span class="text-white/20">/</span>
+          <span class={fam.text}>{service.code}</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <!-- Left: title block -->
+          <div class="lg:col-span-7">
+            <div class="flex flex-wrap items-center gap-3 mb-8">
+              <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full frosted-pill">
+                <span class={`w-1.5 h-1.5 rounded-full ${fam.dot} animate-pulse`}></span>
+                <span class={`text-xs font-mono tracking-wider uppercase ${fam.text} font-medium`}>Familia {fam.key} · {fam.name}</span>
+              </div>
+              <span class="text-[11px] font-mono tracking-widest text-white/50 px-3 py-1.5 rounded-full border border-white/10">{service.code}</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.5rem] tracking-[-0.03em] font-light leading-[1.05] text-white mb-8 text-balance">
+              {service.title}<span class={`${fam.text} font-serif italic`}>.</span>
+            </h1>
+            <p class="text-neutral-300 text-base sm:text-lg font-light leading-relaxed max-w-2xl mb-10 text-balance">
+              {service.tagline}
+            </p>
+            <div class="flex flex-wrap items-center gap-4">
+              <a
+                class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-brand-lima text-brand-midnight font-bold text-sm tracking-tight hover:bg-brand-lima-hover transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg shadow-brand-lima/20"
+                href="/#contacto"
+              >
+                <span>Agendar diagnóstico gratuito</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  ><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg
+                >
+              </a>
+              <a
+                class="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-white/[0.04] hover:bg-white/[0.08] text-white text-sm font-medium border border-white/10 transition-colors"
+                href="/servicios"
+              >
+                <span>Ver los 12 servicios</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: spec sheet -->
+          <div class="lg:col-span-5 lg:pl-6">
+            <div class="rounded-3xl p-7 bg-white/[0.04] border border-white/10 backdrop-blur-md shadow-2xl">
+              <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/[0.08]">
+                <span class="text-[11px] font-mono tracking-widest uppercase text-white">Ficha técnica</span>
+                <span class={`text-[11px] font-mono tracking-widest uppercase ${fam.text}`}>{n} / 12</span>
+              </div>
+              <dl class="space-y-3.5 text-xs font-mono">
+                <div class="flex items-center justify-between gap-4 py-1">
+                  <dt class="text-brand-muted">Código oficial</dt>
+                  <dd class={`font-semibold ${fam.text}`}>{service.code}</dd>
+                </div>
+                <div class="flex items-center justify-between gap-4 py-1">
+                  <dt class="text-brand-muted">Familia</dt>
+                  <dd class="font-semibold text-white text-right">{fam.name}</dd>
+                </div>
+                <div class="flex items-center justify-between gap-4 py-1">
+                  <dt class="text-brand-muted">Modalidad</dt>
+                  <dd class="font-semibold text-white text-right">{shared.spec.modalidad}</dd>
+                </div>
+                <div class="flex items-center justify-between gap-4 py-1">
+                  <dt class="text-brand-muted">Despliegue</dt>
+                  <dd class="font-semibold text-white text-right">{shared.spec.despliegue}</dd>
+                </div>
+                <div class="flex items-center justify-between gap-4 py-1">
+                  <dt class="text-brand-muted">Primer prototipo</dt>
+                  <dd class="font-semibold text-brand-lima text-right">{shared.spec.prototipo}</dd>
+                </div>
+              </dl>
+              <div class="mt-6 pt-5 border-t border-white/[0.08] flex items-center gap-3 text-[11px] font-mono text-brand-muted/70">
+                <span class="flex -space-x-1 items-center">
+                  <span class="w-2 h-2 rounded-full bg-brand-lima"></span>
+                  <span class="w-2 h-2 rounded-full bg-brand-coral"></span>
+                </span>
+                <span>Código 100% propietario · Soporte directo de ingeniería</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Service Hero -->
+
+    <!-- BEGIN: Problem / Solution -->
+    <section class="py-24 bg-[#FAFAFA] text-brand-midnight relative overflow-hidden" data-purpose="service-problem-solution">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center gap-2.5 mb-12">
+          <span class="w-2 h-2 rounded-full bg-brand-crimson"></span>
+          <span class="text-xs font-mono tracking-widest uppercase text-brand-crimson font-semibold">{service.code} · Reto y solución</span>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          <!-- The challenge -->
+          <div class="rounded-3xl p-8 lg:p-10 bg-white border border-black/[0.06] shadow-sm">
+            <div class="text-[11px] font-mono tracking-widest uppercase text-neutral-500 mb-6">El reto</div>
+            <h2 class="text-2xl sm:text-3xl font-light tracking-tight leading-[1.15] text-brand-midnight mb-5">El problema real</h2>
+            <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">{service.problem}</p>
+          </div>
+          <!-- The solution -->
+          <div class="rounded-3xl p-8 lg:p-10 bg-brand-midnight text-white border border-white/10 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-56 h-56 rounded-full opacity-30 pointer-events-none" style={`background: ${fam.gradient}; filter: blur(30px);`}></div>
+            <div class="relative z-10">
+              <div class={`text-[11px] font-mono tracking-widest uppercase ${fam.text} mb-6`}>La solución Quantum Factory</div>
+              <h2 class="text-2xl sm:text-3xl font-light tracking-tight leading-[1.15] text-white mb-5">Cómo lo resolvemos</h2>
+              <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">{service.solution}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Problem / Solution -->
+
+    <!-- BEGIN: Capabilities -->
+    <section class="py-24 bg-white text-neutral-800 relative overflow-hidden" data-purpose="service-capabilities">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mb-14">
+          <div class="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-brand-crimson/10 border border-brand-crimson/20">
+            <span class="w-1.5 h-1.5 rounded-full bg-brand-crimson"></span>
+            <span class="text-xs font-mono tracking-widest uppercase text-brand-crimson font-semibold">{shared.heads.capabilities.eyebrow}</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-neutral-800 mb-4 font-display">{shared.heads.capabilities.h2}</h2>
+          <p class="text-neutral-600 text-base sm:text-lg leading-relaxed text-balance">{shared.heads.capabilities.p}</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10 pt-10 border-t border-black/[0.08]">
+          {
+            service.capabilities.map((c, i) => (
+              <div class="flex items-start gap-5">
+                <span class="text-base font-mono font-bold text-brand-crimson/80 pt-0.5">{String(i + 1).padStart(2, '0')}</span>
+                <div>
+                  <h3 class="text-lg font-bold text-brand-midnight mb-1.5 tracking-tight">{c.title}</h3>
+                  <p class="text-neutral-600 text-sm leading-relaxed">{c.text}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+    <!-- END: Capabilities -->
+
+    <!-- BEGIN: Method -->
+    <section class="py-24 bg-[#0C0D13] border-t border-white/5 relative" data-purpose="service-method">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between pb-8 mb-12 border-b border-white/[0.08] text-xs font-mono text-brand-muted">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-brand-lima animate-pulse"></span>
+            <span class="uppercase tracking-widest text-white">{shared.heads.method.eyebrow}</span>
+          </div>
+          <div class="text-right uppercase tracking-widest text-brand-muted/70 font-mono">
+            <span>Hitos 01 — 03</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl sm:text-4xl font-light tracking-tight text-white leading-[1.1] mb-5">{shared.heads.method.h2}</h2>
+            <p class="text-neutral-400 text-sm leading-relaxed">{shared.heads.method.p}</p>
+          </div>
+          <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {
+              service.steps.map((s, i) => (
+                <div class={`rounded-2xl p-7 bg-white/[0.03] border border-white/10 ${fam.borderHover} transition-colors duration-300 flex flex-col min-h-[260px]`}>
+                  <div class={`text-5xl font-light font-display tracking-tight ${fam.text} mb-8`}>{String(i + 1).padStart(2, '0')}</div>
+                  <div class="mt-auto pt-6 border-t border-white/10">
+                    <h3 class="text-base font-bold text-white tracking-tight leading-snug mb-2">{s.title}</h3>
+                    <p class="text-xs text-neutral-300 leading-relaxed">{s.text}</p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Method -->
+
+    <!-- BEGIN: Outcomes + Sectors -->
+    <section
+      class="py-24 text-white relative overflow-hidden"
+      data-purpose="service-outcomes"
+      style="background: radial-gradient(circle at 75% 50%, rgba(185, 65, 45, 0.18) 0%, rgba(120, 35, 30, 0.08) 45%, rgba(9, 10, 15, 0.98) 75%), rgb(9, 10, 15);"
+    >
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <!-- Outcomes -->
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 mb-6">
+              <span class={`w-1.5 h-1.5 rounded-full ${fam.dot} animate-pulse`}></span>
+              <span class="text-[11px] font-mono tracking-widest uppercase text-brand-muted font-semibold">{shared.heads.outcomes.eyebrow}</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08] mb-10 font-display">{shared.heads.outcomes.h2}</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+              {
+                service.outcomes.map((o) => (
+                  <li class="flex items-start gap-3.5">
+                    <span class={`mt-0.5 w-6 h-6 rounded-full ${fam.bgSoft} border ${fam.border} flex items-center justify-center shrink-0 ${fam.text}`}>
+                      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                    </span>
+                    <span class="text-sm text-neutral-300 leading-relaxed">{o}</span>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <!-- Sectors -->
+          <div class="lg:col-span-5 lg:pl-6 lg:border-l lg:border-white/10">
+            <div class="text-[11px] font-mono tracking-widest uppercase text-brand-muted font-semibold mb-6">{shared.heads.sectors.eyebrow}</div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-3">{shared.heads.sectors.h2}</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-8">{shared.heads.sectors.p}</p>
+            <div class="flex flex-wrap gap-2">
+              {
+                shared.sectors.map((s) => (
+                  <span class="text-xs font-mono px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-neutral-300">{s}</span>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Outcomes + Sectors -->
+
+    <!-- BEGIN: FAQ + Related -->
+    <section class="py-24 bg-[#0C0D13] border-t border-white/5 relative" data-purpose="service-faq">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <!-- FAQ -->
+          <div class="lg:col-span-7">
+            <div class="text-[11px] font-mono tracking-widest uppercase text-brand-muted font-semibold mb-6">{shared.heads.faq.eyebrow}</div>
+            <h2 class="text-3xl sm:text-4xl font-light tracking-tight text-white leading-[1.1] mb-8">{shared.heads.faq.h2}</h2>
+            <div class="border-t border-white/10">
+              {
+                service.faq.map((f) => (
+                  <details class="faq group border-b border-white/10">
+                    <summary class="flex items-center justify-between gap-6 py-5 cursor-pointer list-none text-white text-sm sm:text-base font-medium hover:text-brand-lima transition-colors">
+                      <span>{f.q}</span>
+                      <span class={`faq-pm shrink-0 w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-sm font-bold transition-transform duration-300 ${fam.text}`}>+</span>
+                    </summary>
+                    <p class="pb-6 pr-12 text-sm text-neutral-400 leading-relaxed">{f.a}</p>
+                  </details>
+                ))
+              }
+            </div>
+          </div>
+          <!-- Related -->
+          <div class="lg:col-span-5 lg:pl-6">
+            <div class="text-[11px] font-mono tracking-widest uppercase text-brand-muted font-semibold mb-6">{shared.heads.related.eyebrow}</div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight mb-6">{shared.heads.related.h2}</h3>
+            <div class="space-y-3">
+              {
+                related.map((r) => {
+                  const rf = families[r.family];
+                  return (
+                    <a class={`group flex items-center justify-between gap-4 p-5 rounded-2xl bg-white/[0.04] border border-white/10 ${rf.borderHover} transition-all duration-300 hover:-translate-y-0.5`} href={serviceUrl(r.slug)}>
+                      <div>
+                        <div class={`text-[11px] font-mono tracking-widest ${rf.text} mb-1`}>{r.code}</div>
+                        <div class={`text-sm font-semibold text-white ${rf.hoverText} transition-colors`}>{r.title}</div>
+                      </div>
+                      <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-brand-lima group-hover:text-brand-midnight transition-colors duration-200 text-sm font-bold shrink-0">→</span>
+                    </a>
+                  );
+                })
+              }
+            </div>
+            <a class="inline-flex items-center gap-2 mt-6 text-xs font-mono uppercase tracking-wider text-brand-lima hover:text-white transition-colors" href="/servicios">
+              <span>Ver catálogo completo (12)</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: FAQ + Related -->
+
+    <!-- BEGIN: CTA -->
+    <section
+      class="py-24 relative overflow-hidden"
+      data-purpose="service-cta"
+      id="contacto"
+      style="background: radial-gradient(circle at 50% 50%, rgba(55, 25, 38, 0.6) 0%, rgba(14, 15, 23, 0.95) 80%);"
+    >
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-brand-lima text-xs font-mono mb-6">
+          <span>{shared.cta.eyebrow}</span>
+        </div>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6 text-balance">
+          ¿Tiene sentido <span class="italic font-serif text-brand-lima">para tu empresa?</span>
+        </h2>
+        <p class="text-brand-muted text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-normal">{shared.cta.p}</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+          <a
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-brand-lima hover:bg-brand-lima-hover text-brand-midnight font-bold text-sm transition-all duration-200 shadow-xl shadow-brand-lima/20"
+            href="mailto:hola@quantumfactory.io"
+          >
+            <span>Agendar diagnóstico gratuito</span>
+            <span>→</span>
+          </a>
+          <a
+            class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 rounded-full bg-white/5 hover:bg-white/10 text-white text-sm font-medium border border-white/10 transition-colors"
+            href="/servicios"
+          >
+            <span>Ver catálogo (12)</span>
+          </a>
+        </div>
+        <div class="mt-8 text-xs font-mono text-brand-muted/70">{shared.cta.fine}</div>
+      </div>
+    </section>
+    <!-- END: CTA -->
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  details.faq summary::-webkit-details-marker {
+    display: none;
+  }
+  details.faq[open] .faq-pm {
+    transform: rotate(45deg);
+  }
+</style>

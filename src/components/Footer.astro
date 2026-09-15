@@ -1,0 +1,111 @@
+---
+const quantumStar = '/star-lima.svg';
+const quantumLogo = '/quantum-blanco.svg';
+---
+
+<!-- BEGIN: Monumental Brand Footer -->
+<footer
+  class="bg-[#08090D] text-white pt-20 pb-8 border-t border-white/10 relative overflow-hidden font-sans"
+  data-purpose="site-footer"
+>
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Top Editorial Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 items-start">
+      <!-- Left: Editorial Statement & Copyright -->
+      <div class="lg:col-span-5 flex flex-col justify-between h-full">
+        <div>
+          <h3 class="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight leading-[1.08] text-white">
+            Ingeniería de IA Real.<br />
+            <span class="text-neutral-500 font-light">Impacto Medible.</span>
+          </h3>
+        </div>
+        <div class="mt-12 text-xs font-mono text-neutral-500 tracking-normal">
+          ©2026 Quantum Factory — Boutique AI &amp; Data
+        </div>
+      </div>
+      <!-- Right: Technical Metadata Grid -->
+      <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-y-10 gap-x-12 font-mono text-xs">
+        <!-- Metadata 1: Location -->
+        <div>
+          <div class="text-neutral-500 uppercase tracking-widest text-[11px] mb-2 font-semibold">UBICACIÓN</div>
+          <div class="text-neutral-300 leading-relaxed font-sans text-sm">
+            Madrid · Valencia<br />
+            <span class="text-neutral-400 text-xs font-mono">Remoto UE / Global</span>
+          </div>
+        </div>
+        <!-- Metadata 2: Contact -->
+        <div>
+          <div class="text-neutral-500 uppercase tracking-widest text-[11px] mb-2 font-semibold">CONTACTO</div>
+          <div class="text-neutral-300 leading-relaxed font-sans text-sm">
+            <a class="hover:text-brand-lima transition-colors" href="mailto:hola@quantumfactory.io"
+              >hola@quantumfactory.io</a
+            ><br />
+            <a class="text-neutral-400 text-xs font-mono hover:text-white transition-colors" href="tel:+34918082412"
+              >+34 918 08 24 12</a
+            >
+          </div>
+        </div>
+        <!-- Metadata 3: Availability -->
+        <div>
+          <div class="text-neutral-500 uppercase tracking-widest text-[11px] mb-2 font-semibold">DISPONIBILIDAD</div>
+          <div class="text-neutral-300 leading-relaxed font-sans text-sm">
+            LUN — VIE<br />
+            <span class="text-neutral-400 text-xs font-mono">09:00h — 19:00h (CET)</span>
+          </div>
+        </div>
+        <!-- Metadata 4: Services -->
+        <div>
+          <div class="text-neutral-500 uppercase tracking-widest text-[11px] mb-2 font-semibold">SERVICIOS</div>
+          <div class="text-neutral-300 leading-relaxed font-sans text-sm">
+            12 Capacidades en Producción<br />
+            <span class="text-brand-lima text-xs font-mono font-medium">Código 100% Propietario</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Monumental Center Branding: QUANTUM Typography with Star Lima -->
+    <div class="relative py-8 md:py-12 select-none overflow-hidden group">
+      <!-- Star Lima Accent Floating at Right -->
+      <div
+        class="absolute right-4 sm:right-10 top-0 sm:top-2 w-10 h-10 sm:w-14 sm:h-14 lg:w-16 lg:h-16 opacity-90 group-hover:rotate-45 transition-transform duration-700 pointer-events-none z-10"
+      >
+        <img
+          alt="Quantum Star"
+          class="w-full h-full object-contain filter drop-shadow-[0_0_25px_rgba(204,255,0,0.45)]"
+          src={quantumStar}
+        />
+      </div>
+      <!-- Full-bleed Quantum Logo -->
+      <div class="w-full flex items-center justify-center opacity-95 transition-opacity duration-300 group-hover:opacity-100">
+        <img
+          alt="QUANTUM"
+          class="w-full h-auto object-contain max-h-[160px] md:max-h-[220px] pointer-events-none filter drop-shadow-[0_10px_40px_rgba(255,255,255,0.05)]"
+          src={quantumLogo}
+        />
+      </div>
+    </div>
+    <!-- Bottom Dock / Navigation Capsule Bar -->
+    <div
+      class="mt-6 p-4 rounded-2xl bg-white/[0.04] border border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 backdrop-blur-md"
+    >
+      <!-- Back to Top Trigger Button -->
+      <a class="inline-flex items-center gap-3 text-xs font-mono text-neutral-400 hover:text-white transition-colors group px-2 py-1" href="#">
+        <span class="text-neutral-600">/</span>
+        <span class="tracking-wider">Volver arriba</span>
+        <span
+          class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white group-hover:bg-brand-lima group-hover:text-brand-midnight transition-colors duration-200 text-sm font-bold ml-1"
+          >↑</span
+        >
+      </a>
+      <!-- Legal & Governance Links -->
+      <div class="flex flex-wrap items-center gap-6 text-xs font-mono text-neutral-500">
+        <a class="hover:text-neutral-300 transition-colors" href="#">Aviso Legal</a>
+        <span class="text-neutral-700">·</span>
+        <a class="hover:text-neutral-300 transition-colors" href="#">Privacidad RGPD</a>
+        <span class="text-neutral-700">·</span>
+        <a class="hover:text-neutral-300 transition-colors" href="#">AI Governance &amp; Act</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- END: Monumental Brand Footer -->

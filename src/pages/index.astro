@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Statement from '../components/Statement.astro';
+import Services from '../components/Services.astro';
+import Method from '../components/Method.astro';
+import Differentials from '../components/Differentials.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import { servicesItemListJsonLd } from '../data/seo';
+---
+
+<Layout canonical="/" jsonLd={[servicesItemListJsonLd()]}>
+  <Header />
+  <main>
+    <Hero />
+    <Statement />
+    <Services />
+    <Method />
+    <Differentials />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,94 @@
+---
+const principles = [
+  {
+    n: '01',
+    title: 'Diagnóstico económico previo',
+    text: 'Entendemos tu proceso a fondo y cuantificamos el impacto económico y las horas recuperables antes de escribir una sola línea de código.',
+  },
+  {
+    n: '02',
+    title: 'Prototipo funcional en 15 días',
+    text: 'Prototipamos con tus datos reales y en tu contexto operativo antes de que tomes compromisos de mayor escala.',
+  },
+  {
+    n: '03',
+    title: 'Código 100% tuyo y transferido',
+    text: 'Te entregamos sistemas con código 100% propietario, integrados en tus servidores o nube privada, sin dependencias mensuales de vendor-lock.',
+  },
+];
+---
+
+<!-- BEGIN: Engineering Approach & Big Metrics (Manifiesto Fondo Blanco) -->
+<section class="py-24 bg-[#FAFAFA] text-brand-midnight relative overflow-hidden" data-purpose="statement-metrics">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Top Section Kicker -->
+    <div class="flex items-center gap-2.5 mb-12">
+      <span class="w-2 h-2 rounded-full bg-brand-crimson"></span>
+      <span class="text-xs font-mono tracking-widest uppercase text-brand-crimson font-semibold"
+        >QF · Enfoque de Ingeniería</span
+      >
+    </div>
+    <!-- Asymmetric Statement Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start pb-20 editorial-border-light">
+      <!-- Left Main Heading -->
+      <div class="lg:col-span-6">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight leading-[1.15] text-brand-midnight">
+          No vendemos humo ni licencias cautivas. <span class="font-semibold text-brand-crimson"
+            >Construimos soluciones que resuelven trabajo real.</span
+          >
+        </h2>
+      </div>
+      <!-- Right Ordered Principles -->
+      <div class="lg:col-span-6 space-y-8 font-sans">
+        {
+          principles.map((p) => (
+            <div class="flex items-start gap-5">
+              <span class="text-base font-mono font-bold text-brand-crimson/80 pt-0.5">{p.n}</span>
+              <div>
+                <h3 class="text-lg font-bold text-brand-midnight mb-1">{p.title}</h3>
+                <p class="text-neutral-600 text-sm leading-relaxed">{p.text}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <!-- Monumental Numerical Metrics Row -->
+    <div class="pt-16 grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">
+      <div class="group">
+        <div class="text-6xl lg:text-7xl font-light tracking-tighter text-brand-midnight mb-3 font-display">
+          100<span class="text-brand-crimson">%</span>
+        </div>
+        <div class="text-sm font-semibold uppercase tracking-wider text-neutral-800 mb-1 font-mono">
+          Código Propietario
+        </div>
+        <p class="text-neutral-500 text-xs leading-normal">
+          Toda la propiedad intelectual de la solución pasa a ser activo patrimonial exclusivo de tu empresa.
+        </p>
+      </div>
+      <div class="group">
+        <div class="text-6xl lg:text-7xl font-light tracking-tighter text-brand-midnight mb-3 font-display">
+          15 <span class="text-2xl font-sans tracking-tight text-neutral-400 font-normal">días</span>
+        </div>
+        <div class="text-sm font-semibold uppercase tracking-wider text-neutral-800 mb-1 font-mono">
+          Tiempo de Prototipado
+        </div>
+        <p class="text-neutral-500 text-xs leading-normal">
+          Construcción y testeo de tu flujo principal con datos reales antes del despliegue masivo en producción.
+        </p>
+      </div>
+      <div class="group">
+        <div class="text-6xl lg:text-7xl font-light tracking-tighter text-brand-midnight mb-3 font-display">
+          12 <span class="text-2xl font-sans tracking-tight text-neutral-400 font-normal">líneas</span>
+        </div>
+        <div class="text-sm font-semibold uppercase tracking-wider text-neutral-800 mb-1 font-mono">
+          Capacidades Especializadas
+        </div>
+        <p class="text-neutral-500 text-xs leading-normal">
+          Desde automatización robótica y agentes autónomos hasta procesamiento documental e integración profunda.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: Engineering Approach & Big Metrics -->

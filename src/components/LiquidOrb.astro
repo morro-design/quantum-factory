@@ -12,6 +12,7 @@ const { className, copy } = Astro.props;
     <span class="liquid-orb__flow liquid-orb__flow--one"></span>
     <span class="liquid-orb__flow liquid-orb__flow--two"></span>
     <span class="liquid-orb__flow liquid-orb__flow--three"></span>
+    <span class="liquid-orb__lighting"></span>
   </div>
   {copy && (
     <div class="liquid-orb__copy max-w-md px-6 text-center text-white/90">
@@ -44,7 +45,9 @@ const { className, copy } = Astro.props;
     isolation: isolate;
     overflow: hidden;
     background: #1f1e26;
-    box-shadow: 0 0 100px rgba(173, 69, 68, 0.12);
+    box-shadow:
+      28px 40px 92px rgba(0, 0, 0, 0.58),
+      -12px -14px 58px rgba(199, 180, 114, 0.14);
   }
 
   .liquid-orb__surface {
@@ -84,6 +87,20 @@ const { className, copy } = Astro.props;
   .liquid-orb__flow--three {
     background: radial-gradient(ellipse 65% 68% at 98% 91%, rgba(255, 139, 148, 0.36), transparent 80%);
     animation: liquid-drift-three 20s ease-in-out infinite alternate;
+  }
+
+  .liquid-orb__lighting {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 65% 65% at 76% 18%, rgba(255, 244, 218, 0.32) 0%, rgba(255, 244, 218, 0.08) 43%, transparent 74%),
+      radial-gradient(ellipse 110% 105% at 74% 22%, transparent 25%, rgba(9, 7, 15, 0.14) 54%, rgba(9, 7, 15, 0.8) 100%),
+      linear-gradient(135deg, rgba(9, 7, 15, 0.19), transparent 44%);
+    box-shadow:
+      inset -38px -48px 76px rgba(9, 7, 15, 0.48),
+      inset 0 1px 1px rgba(255, 244, 218, 0.16);
   }
 
   .liquid-orb__copy {

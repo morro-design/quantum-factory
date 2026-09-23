@@ -1,15 +1,15 @@
 ---
+import LiquidOrb from './LiquidOrb.astro';
+
 const starLima = '/star-lima.svg';
 const starSecondary = '/star-lima.svg';
-const sphereStyle =
-  'background: radial-gradient(circle at 70% 30%, rgba(255, 107, 122, 0.95) 0%, rgba(158, 59, 66, 0.9) 35%, rgba(45, 20, 35, 0.92) 70%, rgba(8, 9, 13, 0.98) 100%); box-shadow: 0 0 120px rgba(255, 107, 122, 0.18);';
 const heroCopy =
   'Diseñamos y ponemos en producción sistemas de inteligencia artificial que automatizan tareas, convierten tus datos en decisiones y hacen crecer tu negocio con ROI demostrado.';
 ---
 
 <!-- BEGIN: Hero Section -->
 <section
-  class="relative hero-min-h flex items-center pt-24 sm:pt-28 pb-16 sm:pb-20 overflow-hidden bg-brand-midnight"
+  class="relative hero-min-h corporate-gradient-hero flex items-center pt-24 sm:pt-28 pb-16 sm:pb-20 overflow-hidden bg-brand-midnight"
   data-purpose="hero-section"
 >
   <!-- Suspended Lima Star Accent -->
@@ -24,24 +24,15 @@ const heroCopy =
   </div>
 
   <!-- < xl: the sphere is an ambient orb behind the copy; its bright core sits off-canvas so the headline stays legible -->
-  <div
-    class="xl:hidden absolute -right-[22%] sm:-right-[14%] -top-6 sm:-top-[10%] w-[88vw] sm:w-[70vw] max-w-[640px] aspect-square rounded-full z-0 pointer-events-none select-none opacity-70"
-    style={sphereStyle}
-    aria-hidden="true"
-  >
-  </div>
+  <LiquidOrb
+    className="xl:hidden absolute -right-[22%] sm:-right-[14%] -top-6 sm:-top-[10%] w-[88vw] sm:w-[70vw] max-w-[640px] aspect-square rounded-full z-0 pointer-events-none select-none opacity-70"
+  />
 
   <!-- ≥ xl: Big Chromatic Sphere at Right with Inset Text (capped at 64vh = 70% of the 92vh hero so it always keeps top/bottom breathing room) -->
-  <div
-    class="hidden xl:flex absolute -right-10 top-1/2 -translate-y-1/2 w-[min(560px,64vh)] h-[min(560px,64vh)] 2xl:w-[min(660px,64vh)] 2xl:h-[min(660px,64vh)] rounded-full z-10 pointer-events-none select-none items-center justify-center p-12 text-center"
-    style={sphereStyle}
-  >
-    <div class="max-w-md px-6 text-center text-white/90">
-      <p class="text-base 2xl:text-[min(18px,2vh)] font-light leading-relaxed text-balance text-neutral-200">
-        {heroCopy}
-      </p>
-    </div>
-  </div>
+  <LiquidOrb
+    className="hidden xl:flex absolute -right-10 top-1/2 -translate-y-1/2 w-[min(560px,64vh)] h-[min(560px,64vh)] 2xl:w-[min(660px,64vh)] 2xl:h-[min(660px,64vh)] rounded-full z-10 pointer-events-none select-none items-center justify-center p-12 text-center"
+    copy={heroCopy}
+  />
 
   <!-- Decorative Secondary Ambient Star Accent -->
   <div class="absolute right-[8%] sm:right-[22%] bottom-10 sm:bottom-16 w-9 h-9 sm:w-12 sm:h-12 z-20 pointer-events-none select-none opacity-40">

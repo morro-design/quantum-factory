@@ -6,6 +6,14 @@ colors:
   acid-lima-pressed: "#B8E600"
   signal-coral: "#FF6B7A"
   oxblood: "#9E3B42"
+  orb-red: "#AD4544"
+  orb-dark: "#1F1E26"
+  orb-dark-top: "#1C171B"
+  orb-dark-lower-left: "#281F34"
+  orb-dark-lower-right: "#412929"
+  orb-violet: "#524153"
+  orb-gold: "#C7B472"
+  orb-coral: "#FF8B94"
   carbon-black: "#08090D"
   carbon-ink: "#0C0D13"
   carbon-void: "#090A0F"
@@ -160,7 +168,7 @@ A serious technical magazine printed on black paper. The page is carbon, the typ
 
 Warmth comes from two places only: the italic serif "turn" at the end of a headline (*tu empresa.*, *en semanas.*, *gratuito.*), and the coral/oxblood glow of the chromatic spheres and gradient cards. Those are the human, editorial gestures inside an otherwise sober instrument. Density is generous: sections breathe at 96–112px, headlines take a full column, and grids are asymmetric (4/8, 6/6 of twelve) rather than centered stacks.
 
-Confirmed rejections: no AI clichés (brains, circuit boards, robots, neural-net imagery), no sparkle or particle effects, no neutral drop-shadows as a lift device, no generic SaaS gradient-blob backgrounds beyond the committed sphere motif.
+Confirmed rejections: no AI clichés (brains, circuit boards, robots, neural-net imagery), no sparkle or particle effects, no neutral drop-shadows as a lift device, no generic SaaS gradient-blob backgrounds beyond the committed corporate gradient on the home hero and contact section.
 
 **Key Characteristics:**
 - Carbon-black ground alternating with paper/white editorial sections
@@ -193,7 +201,7 @@ Near-black carbon tones layered by section, one acid highlighter, one warm signa
 - **Carbon Ink** (`#0C0D13`): method section, nav dropdown, combos section.
 - **Carbon Void** (`#090A0F`): differentials ground under its oxblood radial.
 - **Carbon Navy** (`#0E0F17`): token exists (`brand-navy`); reserved, lightly used.
-- **Carbon Plum** (`#12131C`): contact/lead banner ground under its plum radial.
+- **Carbon Plum** (`#12131C`): dark supporting ground. The home hero and contact banner use the sampled corporate gradient; the hero applies it at 28% opacity so its text and animated sphere remain the focal points.
 - **Graphite** (`#1E202B`): token exists (`brand-slate`); reserved.
 - **Steel Muted** (`#8A8F9E`): secondary text and nav links on dark; footer meta.
 - **Paper** (`#FAFAFA`): statement section ground, light catalog cards.
@@ -250,7 +258,7 @@ The incumbent code still applies neutral `shadow-2xl` (`0 25px 50px -12px rgba(0
 
 ### Shadow Vocabulary
 - **CTA glow** (`box-shadow: 0 10px 15px -3px rgba(204,255,0,0.2), 0 4px 6px -4px rgba(204,255,0,0.2)`): under the primary lima button; `shadow-xl` variant on the lead banner.
-- **Sphere glow** (`box-shadow: 0 0 120px rgba(255,107,122,0.18)`): the hero sphere's ambient halo.
+- **Sphere glow** (`box-shadow: 0 0 100px rgba(173,69,68,0.12)`): the hero sphere's ambient halo.
 - **Star glow** (`filter: drop-shadow(0 0 25px rgba(204,255,0,0.35))`; coral variant `0 0 20px rgba(255,107,122,0.4)`): behind the lima star asset.
 - **Legacy (retire):** `shadow-2xl` on gradient/method cards, `shadow-lg` on icon wraps, `shadow-md` on the dark mono button.
 
@@ -295,7 +303,7 @@ Precise and quietly confident: pill geometry, hairline borders, restrained hover
 - No mobile navigation exists below `md` — gap.
 
 ### Signature Component: Chromatic Sphere
-A 520–660px circle anchored `right: −80px → −40px`, vertically centered, filled with `radial-gradient(circle at 70% 30%, <accent 95%> 0%, <accent-deep 90%> 35%, <near-black 92%> 70%, carbon 98%> 100%)` and haloed by the sphere glow. The hero sphere is coral/oxblood and carries the value proposition inset in 300-weight neutral-200 text; service detail heroes recolor it per family (see `families[].gradient`). It sits at `z-index` below content, `pointer-events: none`.
+A 520–660px circle anchored `right: −80px → −40px`, vertically centered and haloed by the sphere glow. The home hero uses a sampled five-color liquid gradient: red `#AD4544` at the upper left, dark `#1F1E26` at the center, violet `#524153` near (73%, 27%), gold `#C7B472` at the upper right, and coral `#FF8B94` at the lower right. Broad radial fields preserve this composition while translucent layers drift slowly inside the circle. The text stays fixed and legible; animation pauses offscreen and under reduced motion. Service detail heroes retain their family-specific static gradients (see `families[].gradient`).
 
 ### Signature Component: Lima Star
 `star-lima.svg` at 48–64px with the star glow, placed as a suspended accent (top center of hero, top right of catalog hero) and at 40% opacity as a secondary ambient mark. Never more than two per viewport.

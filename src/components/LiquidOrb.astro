@@ -1,0 +1,115 @@
+---
+interface Props {
+  className: string;
+  copy?: string;
+}
+
+const { className, copy } = Astro.props;
+---
+
+<div class:list={["liquid-orb", className]} data-liquid-orb aria-hidden={copy ? undefined : 'true'}>
+  <div class="liquid-orb__surface" aria-hidden="true">
+    <span class="liquid-orb__flow liquid-orb__flow--one"></span>
+    <span class="liquid-orb__flow liquid-orb__flow--two"></span>
+    <span class="liquid-orb__flow liquid-orb__flow--three"></span>
+  </div>
+  {copy && (
+    <div class="liquid-orb__copy max-w-md px-6 text-center text-white/90">
+      <p class="text-base 2xl:text-[min(18px,2vh)] font-light leading-relaxed text-balance text-neutral-200">
+        {copy}
+      </p>
+    </div>
+  )}
+</div>
+
+<script>
+  const orbs = document.querySelectorAll<HTMLElement>('[data-liquid-orb]');
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      (entry.target as HTMLElement).classList.toggle('liquid-orb--active', entry.isIntersecting && !document.hidden);
+    }
+  });
+
+  for (const orb of orbs) observer.observe(orb);
+
+  document.addEventListener('visibilitychange', () => {
+    for (const orb of orbs) {
+      orb.classList.toggle('liquid-orb--active', !document.hidden && orb.getBoundingClientRect().bottom > 0 && orb.getBoundingClientRect().top < innerHeight);
+    }
+  });
+</script>
+
+<style>
+  .liquid-orb {
+    isolation: isolate;
+    overflow: hidden;
+    background: #1f1e26;
+    box-shadow: 0 0 100px rgba(173, 69, 68, 0.12);
+  }
+
+  .liquid-orb__surface {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: inherit;
+    background: var(--corporate-gradient);
+  }
+
+  .liquid-orb__flow {
+    position: absolute;
+    inset: -6%;
+    border-radius: 46%;
+    filter: blur(32px);
+    pointer-events: none;
+  }
+
+  .liquid-orb:not(.liquid-orb--active) .liquid-orb__flow {
+    animation-play-state: paused;
+  }
+
+  .liquid-orb--active .liquid-orb__flow {
+    animation-play-state: running;
+  }
+
+  .liquid-orb__flow--one {
+    background: radial-gradient(ellipse 65% 75% at 4% 7%, rgba(173, 69, 68, 0.35), transparent 78%);
+    animation: liquid-drift-one 18s ease-in-out infinite alternate;
+  }
+
+  .liquid-orb__flow--two {
+    background: radial-gradient(ellipse 63% 72% at 98% 5%, rgba(199, 180, 114, 0.33), transparent 77%);
+    animation: liquid-drift-two 22s ease-in-out infinite alternate;
+  }
+
+  .liquid-orb__flow--three {
+    background: radial-gradient(ellipse 65% 68% at 98% 91%, rgba(255, 139, 148, 0.36), transparent 80%);
+    animation: liquid-drift-three 20s ease-in-out infinite alternate;
+  }
+
+  .liquid-orb__copy {
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes liquid-drift-one {
+    0% { transform: translate3d(-3%, -4%, 0) scale(0.98); }
+    50% { transform: translate3d(5%, 4%, 0) scale(1.07); }
+    100% { transform: translate3d(-2%, 7%, 0) scale(1.02); }
+  }
+
+  @keyframes liquid-drift-two {
+    0% { transform: translate3d(4%, -3%, 0) scale(1.04); }
+    50% { transform: translate3d(-6%, 5%, 0) scale(0.97); }
+    100% { transform: translate3d(2%, 3%, 0) scale(1.06); }
+  }
+
+  @keyframes liquid-drift-three {
+    0% { transform: translate3d(-3%, 5%, 0) scale(1.03); }
+    50% { transform: translate3d(5%, -6%, 0) scale(0.96); }
+    100% { transform: translate3d(-6%, 2%, 0) scale(1.08); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .liquid-orb__flow { animation: none; }
+  }
+</style>

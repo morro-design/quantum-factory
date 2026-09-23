@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Corporate gradient sampled from the supplied reference image. */
+:root {
+  --corporate-gradient:
+    radial-gradient(ellipse 66% 74% at 103% 96%, #ff8b94 0%, rgba(255, 139, 148, 0.64) 40%, transparent 90%),
+    radial-gradient(ellipse 63% 76% at 104% -6%, #c7b472 0%, rgba(199, 180, 114, 0.62) 38%, transparent 88%),
+    radial-gradient(ellipse 58% 69% at 73% 27%, #524153 0%, rgba(82, 65, 83, 0.55) 48%, transparent 95%),
+    radial-gradient(ellipse 69% 75% at -5% -6%, #ad4544 0%, rgba(173, 69, 68, 0.65) 42%, transparent 94%),
+    linear-gradient(155deg, #1c171b 0%, #1f1e26 48%, #281f34 76%, #412929 100%);
+}
+
+.corporate-gradient-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--corporate-gradient);
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.corporate-gradient-contact {
+  background: var(--corporate-gradient);
+}
+
 /* Custom typography */
 .font-feature-settings {
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";

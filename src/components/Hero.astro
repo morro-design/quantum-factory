@@ -3,7 +3,7 @@ import LiquidOrb from './LiquidOrb.astro';
 
 const starLima = '/star-lima.svg';
 const heroCopy =
-  'Cuantificamos horas y euros antes de escribir código. Prototipo funcional en 15 días con tus datos. Después, el código es tuyo: tu infraestructura o nube europea, sin licencia cautiva.';
+  'Diseñamos y ponemos en producción sistemas de inteligencia artificial que automatizan tareas, convierten tus datos en decisiones y hacen crecer tu negocio con ROI demostrado.';
 ---
 
 <section
@@ -11,7 +11,7 @@ const heroCopy =
   data-purpose="hero-section"
 >
   <div
-    class="absolute top-20 sm:top-24 left-1/2 -translate-x-1/2 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 z-20 pointer-events-none select-none opacity-95"
+    class="absolute top-[4.5rem] right-4 sm:top-24 sm:right-auto sm:left-1/2 sm:-translate-x-1/2 w-8 h-8 sm:w-14 sm:h-14 md:w-16 md:h-16 z-20 pointer-events-none select-none opacity-95"
   >
     <img
       alt=""
@@ -20,28 +20,29 @@ const heroCopy =
     />
   </div>
 
+  <div
+    class="hidden xl:block absolute left-[76%] bottom-[6%] w-10 h-10 z-20 pointer-events-none select-none opacity-35"
+    aria-hidden="true"
+  >
+    <img class="w-full h-full object-contain" src={starLima} alt="" />
+  </div>
+
   <LiquidOrb
     className="xl:hidden absolute -right-[22%] sm:-right-[14%] -top-6 sm:-top-[10%] w-[88vw] sm:w-[70vw] max-w-[640px] aspect-square rounded-full z-0 pointer-events-none select-none opacity-70"
   />
 
   <LiquidOrb
-    className="hidden xl:flex absolute -right-10 top-1/2 -translate-y-1/2 w-[min(560px,64vh)] h-[min(560px,64vh)] 2xl:w-[min(660px,64vh)] 2xl:h-[min(660px,64vh)] rounded-full z-10 pointer-events-none select-none items-center justify-center p-12 text-center"
+    className="hidden xl:flex absolute right-[3%] top-1/2 -translate-y-1/2 w-[min(700px,42vw,72vh)] h-[min(700px,42vw,72vh)] rounded-full z-10 pointer-events-none select-none items-center justify-center p-12 text-center"
     copy={heroCopy}
   />
 
   <div class="relative z-20 max-w-7xl mx-auto px-5 sm:px-6 w-full">
-    <div class="mb-8 sm:mb-10 inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full frosted-pill">
-      <span class="text-brand-lima text-xs" aria-hidden="true">✦</span>
-      <span class="text-xs font-mono tracking-wider uppercase text-brand-lima font-medium"
-        >Diagnóstico · prototipo · código tuyo</span
-      >
-    </div>
     <div class="max-w-3xl">
       <h1
         class="text-[clamp(3rem,7vw,5.4rem)] tracking-[-0.035em] font-light leading-[1.03] text-white mb-6 sm:mb-8 text-balance"
       >
-        Diagnostica el retorno.<br />
-        <span class="italic font-serif font-light text-brand-lima">El código es tuyo.</span>
+        IA que trabaja para <br />
+        <span class="italic font-serif font-light text-brand-lima">tu empresa.</span>
       </h1>
       <p class="xl:hidden max-w-xl text-base sm:text-lg font-light leading-relaxed text-neutral-300 text-balance mb-8 sm:mb-10">
         {heroCopy}
@@ -51,7 +52,7 @@ const heroCopy =
           class="inline-flex items-center justify-center gap-3 min-h-[52px] px-8 py-4 rounded-full bg-brand-lima text-brand-midnight font-bold text-sm tracking-tight hover:bg-brand-lima-hover transition-colors duration-200 shadow-lg shadow-brand-lima/20"
           href="#contacto"
         >
-          <span>Pedir el diagnóstico · 20 min</span>
+          <span>Hablemos de tu reto</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
             ><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             ></path></svg
@@ -61,7 +62,7 @@ const heroCopy =
           class="inline-flex items-center justify-center gap-2 min-h-[44px] text-sm font-medium text-white/80 hover:text-white transition-colors"
           href="/servicios"
         >
-          <span>Ver el catálogo</span>
+          <span>Ver los 12 servicios</span>
           <span aria-hidden="true">→</span>
         </a>
       </div>

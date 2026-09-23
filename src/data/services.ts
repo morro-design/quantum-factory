@@ -130,26 +130,22 @@ export const detailShared = {
   ],
   heads: {
     capabilities: {
-      eyebrow: 'Capacidades incluidas',
       h2: 'Lo que construimos para tu empresa',
       p: 'Módulos diseñados e integrados a la medida de tu infraestructura operativa.',
     },
     method: {
-      eyebrow: 'Metodología',
       h2: 'De la idea a producción en semanas',
       p: 'Hitos claros con entregas funcionales. Pruebas sobre tus datos antes de escalar.',
     },
-    outcomes: { eyebrow: 'Impacto directo', h2: 'Resultados tangibles', p: '' },
+    outcomes: { h2: 'Resultados tangibles', p: '' },
     sectors: {
-      eyebrow: 'Sectores habituales',
       h2: 'Dónde aporta mayor retorno',
       p: 'Cualquier empresa con volumen operativo, procesos recurrentes o datos estratégicos.',
     },
-    faq: { eyebrow: 'Dudas frecuentes', h2: 'Preguntas y respuestas', p: '' },
-    related: { eyebrow: 'Ecosistema modular', h2: 'Servicios que suelen combinarse', p: '' },
+    faq: { h2: 'Preguntas y respuestas', p: '' },
+    related: { h2: 'Servicios que suelen combinarse', p: '' },
   },
   cta: {
-    eyebrow: 'Hablemos',
     h2: '¿Tiene sentido para tu empresa?',
     p: 'Escríbenos para una conversación de 20 minutos. Revisamos tu operativa, valoramos si tiene sentido aplicar IA y te proponemos un camino claro. Sin compromiso de contratación.',
     fine: 'Respuesta en menos de 24h · Prototipo funcional en 2 semanas',
@@ -158,11 +154,9 @@ export const detailShared = {
 
 /** Copy for the /servicios catalog page. */
 export const catalog = {
-  eyebrow: 'Catálogo Oficial de Capacidades',
   h1: 'Servicios de Inteligencia Artificial',
   p: 'Doce líneas de servicio especializadas para resolver problemas operativos reales, con despliegue en servidores seguros en Europa y código 100% propietario.',
   combos: {
-    eyebrow: 'Enfoque de Integración',
     h2: '¿Cómo se combinan estos servicios?',
     p: 'Rara vez un proyecto usa una sola pieza. Lo habitual es combinar varias líneas, o convertirlas en un sistema a medida.',
     items: [
@@ -181,7 +175,6 @@ export const catalog = {
     ],
   },
   cta: {
-    eyebrow: 'Siguiente paso',
     h2: 'Diagnóstico técnico gratuito',
     p: 'Analizamos en 20 minutos qué servicios tienen el mayor retorno para tu empresa y te entregamos una propuesta concreta sin compromiso.',
     fine: 'Respuesta garantizada en menos de 24 horas',

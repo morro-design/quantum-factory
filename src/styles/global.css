@@ -75,15 +75,10 @@ html.menu-open body {
   }
 }
 
-/* Hero height: fill the first screen under the fixed header (svh ignores the mobile URL bar) */
+/* The fixed header overlays the hero, so the hero fills the entire first viewport. */
 .hero-min-h {
-  min-height: calc(100vh - 4rem);
-  min-height: calc(100svh - 4rem);
-}
-@media (min-width: 1024px) {
-  .hero-min-h {
-    min-height: 92vh;
-  }
+  min-height: 100vh;
+  min-height: 100svh;
 }
 
 ::selection {

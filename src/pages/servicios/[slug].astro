@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import { services, families, getService, serviceUrl, detailShared as shared } from '../../data/services';
 import { breadcrumbJsonLd, serviceJsonLd, faqJsonLd } from '../../data/seo';
+import { diagnosticMailto, site } from '../../data/site';
 
 export function getStaticPaths() {
   return services.map((s) => ({ params: { slug: s.slug } }));
@@ -64,8 +65,8 @@ const jsonLd = [
           <div class="lg:col-span-7">
             <div class="flex flex-wrap items-center gap-3 mb-6 sm:mb-8">
               <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full frosted-pill">
-                <span class={`w-1.5 h-1.5 rounded-full ${fam.dot} animate-pulse`}></span>
-                <span class={`text-[10px] sm:text-xs font-mono tracking-wide sm:tracking-wider uppercase ${fam.text} font-medium`}>Familia {fam.key} · {fam.name}</span>
+                <span class={`w-1.5 h-1.5 rounded-full ${fam.dot}`}></span>
+                <span class={`text-xs font-mono tracking-wider uppercase ${fam.text} font-medium`}>Familia {fam.key} · {fam.name}</span>
               </div>
               <span class="text-[11px] font-mono tracking-widest text-white/50 px-3 py-1.5 rounded-full border border-white/10">{service.code}</span>
             </div>
@@ -78,9 +79,9 @@ const jsonLd = [
             <div class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4">
               <a
                 class="inline-flex items-center justify-center gap-3 min-h-[52px] px-8 py-4 rounded-full bg-brand-lima text-brand-midnight font-bold text-sm tracking-tight hover:bg-brand-lima-hover transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg shadow-brand-lima/20"
-                href="/#contacto"
+                href="#contacto"
               >
-                <span>Agendar diagnóstico gratuito</span>
+                <span>Pedir el diagnóstico · 20 min</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                   ><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg
                 >
@@ -96,7 +97,7 @@ const jsonLd = [
 
           <!-- Right: spec sheet -->
           <div class="lg:col-span-5 lg:pl-6">
-            <div class="rounded-3xl p-5 sm:p-7 bg-white/[0.04] border border-white/10 backdrop-blur-md shadow-2xl">
+            <div class="rounded-3xl p-5 sm:p-7 bg-white/[0.04] border border-white/10 backdrop-blur-md">
               <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/[0.08]">
                 <span class="text-[11px] font-mono tracking-widest uppercase text-white">Ficha técnica</span>
                 <span class={`text-[11px] font-mono tracking-widest uppercase ${fam.text}`}>{n} / 12</span>
@@ -152,7 +153,7 @@ const jsonLd = [
             <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">{service.problem}</p>
           </div>
           <!-- The solution -->
-          <div class="rounded-3xl p-6 sm:p-8 lg:p-10 bg-brand-midnight text-white border border-white/10 shadow-2xl relative overflow-hidden">
+          <div class="rounded-3xl p-6 sm:p-8 lg:p-10 bg-brand-midnight text-white border border-white/10 relative overflow-hidden">
             <div class="absolute -right-16 -top-16 w-56 h-56 rounded-full opacity-30 pointer-events-none" style={`background: ${fam.gradient}; filter: blur(30px);`}></div>
             <div class="relative z-10">
               <div class={`text-[11px] font-mono tracking-widest uppercase ${fam.text} mb-6`}>La solución Quantum Factory</div>
@@ -344,9 +345,9 @@ const jsonLd = [
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
           <a
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2 min-h-[52px] px-8 py-4 rounded-full bg-brand-lima hover:bg-brand-lima-hover text-brand-midnight font-bold text-sm transition-all duration-200 shadow-xl shadow-brand-lima/20"
-            href="mailto:hola@quantumfactory.io"
+            href={diagnosticMailto}
           >
-            <span>Agendar diagnóstico gratuito</span>
+            <span>Escribir a {site.email}</span>
             <span>→</span>
           </a>
           <a
@@ -356,7 +357,11 @@ const jsonLd = [
             <span>Ver catálogo (12)</span>
           </a>
         </div>
-        <div class="mt-8 text-xs font-mono text-brand-muted/70">{shared.cta.fine}</div>
+        <p class="mt-6 text-xs font-mono text-brand-muted/80">
+          Te respondemos en menos de 24 h con tres huecos. O llama al{' '}
+          <a class="text-white hover:text-brand-lima transition-colors" href={`tel:${site.phone}`}>{site.phoneDisplay}</a>.
+        </p>
+        <div class="mt-3 text-xs font-mono text-brand-muted/70">{shared.cta.fine}</div>
       </div>
     </section>
     <!-- END: CTA -->

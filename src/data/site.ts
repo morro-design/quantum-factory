@@ -18,7 +18,7 @@ export const site = {
   founded: '2026',
   defaultTitle: 'Quantum Factory — Boutique AI & Data | Inteligencia Artificial Aplicada',
   defaultDescription:
-    'Diseñamos y ponemos en producción sistemas de inteligencia artificial que automatizan tareas, convierten tus datos en decisiones y hacen crecer tu negocio con ROI demostrado. Código 100% propietario, despliegue europeo y RGPD.',
+    'Diagnóstico económico antes de escribir código. Prototipo funcional en 15 días con tus datos, código 100% transferido y despliegue europeo conforme a RGPD.',
   keywords: [
     'inteligencia artificial empresas',
     'automatización de procesos con IA',
@@ -87,3 +87,6 @@ export const websiteJsonLd = {
   inLanguage: site.lang,
   publisher: { '@id': `${site.url}/#organization` },
 };
+
+/** Honest contact until a booking URL exists. Opens the mail client with the ask already written. */
+export const diagnosticMailto = `mailto:${site.email}?subject=${encodeURIComponent('Diagnóstico 20 min')}&body=${encodeURIComponent('Hola,\n\nQuiero el diagnóstico gratuito de 20 minutos.\n\nEmpresa:\nProceso a revisar:\n')}`;

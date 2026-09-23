@@ -85,3 +85,24 @@ html.menu-open body {
     min-height: 92vh;
   }
 }
+
+::selection {
+  background: #ccff00;
+  color: #08090d;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid #ccff00;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px #08090d;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse {
+    animation: none;
+  }
+}

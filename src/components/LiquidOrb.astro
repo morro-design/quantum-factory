@@ -90,6 +90,7 @@ const { className, copy } = Astro.props;
     inset: 0;
     border-radius: inherit;
     background: var(--corporate-gradient);
+    filter: brightness(0.62) saturate(0.9);
     transform-origin: center;
     animation: liquid-orbit 42s linear infinite;
   }
@@ -132,7 +133,7 @@ const { className, copy } = Astro.props;
     border-radius: inherit;
     pointer-events: none;
     background:
-      radial-gradient(ellipse 65% 65% at 76% 18%, rgba(255, 244, 218, 0.32) 0%, rgba(255, 244, 218, 0.08) 43%, transparent 74%),
+      radial-gradient(ellipse 65% 65% at 76% 18%, rgba(255, 244, 218, 0.13) 0%, rgba(255, 244, 218, 0.03) 43%, transparent 74%),
       radial-gradient(ellipse 110% 105% at 74% 22%, transparent 25%, rgba(9, 7, 15, 0.14) 54%, rgba(9, 7, 15, 0.8) 100%),
       linear-gradient(135deg, rgba(9, 7, 15, 0.19), transparent 44%);
     box-shadow:

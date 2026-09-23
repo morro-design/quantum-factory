@@ -151,7 +151,7 @@ export const detailShared = {
   cta: {
     eyebrow: 'Hablemos',
     h2: '¿Tiene sentido para tu empresa?',
-    p: 'Agendemos una sesión de diagnóstico de 20 minutos. Analizamos tu operativa, valoramos la viabilidad y te proponemos un camino claro sin compromiso.',
+    p: 'Escríbenos para una conversación de 20 minutos. Revisamos tu operativa, valoramos si tiene sentido aplicar IA y te proponemos un camino claro. Sin compromiso de contratación.',
     fine: 'Respuesta en menos de 24h · Prototipo funcional en 2 semanas',
   },
 };
@@ -164,7 +164,7 @@ export const catalog = {
   combos: {
     eyebrow: 'Enfoque de Integración',
     h2: '¿Cómo se combinan estos servicios?',
-    p: 'Rara vez un proyecto utiliza una única pieza aislada. Nuestros clientes suelen combinar varias capacidades o convertirlas en un sistema integral a medida.',
+    p: 'Rara vez un proyecto usa una sola pieza. Lo habitual es combinar varias líneas, o convertirlas en un sistema a medida.',
     items: [
       {
         title: 'Captación & Soporte',

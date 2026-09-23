@@ -32,17 +32,19 @@ void main() {
   float u = 0.5 - 0.5 * cos(6.2831853 * phase);
   float v = clamp(0.5 + asin(clamp(local.y, -1.0, 1.0)) / 3.14159265 + flow * 0.008, 0.0, 1.0);
   vec3 pigment = texture2D(u_map, vec2(u, v)).rgb;
+  // Compress the reference's gold and coral highlights into the orb's midtones.
+  pigment = pigment / (1.0 + pigment);
 
   vec3 light = normalize(vec3(0.55, 0.68, 1.0));
   float diffuse = max(dot(normal, light), 0.0);
   float edge = smoothstep(0.0, 0.32, normal.z);
   vec3 color = pigment * (0.55 + 0.4 * diffuse) * mix(0.45, 1.0, edge);
-  color += vec3(1.0, 0.40, 0.45) * pow(diffuse, 3.0) * 0.20;
+  color += vec3(0.55, 0.22, 0.26) * pow(diffuse, 3.0) * 0.12;
 
   vec3 reflected = reflect(-light, normal);
   float specular = max(reflected.z, 0.0);
-  color += vec3(1.0, 0.90, 0.82) * (
-    pow(specular, 4.0) * 0.09 + pow(specular, 24.0) * 0.06
+  color += vec3(0.55, 0.47, 0.48) * (
+    pow(specular, 4.0) * 0.08 + pow(specular, 24.0) * 0.04
   );
 
   gl_FragColor = vec4(color, 1.0);
